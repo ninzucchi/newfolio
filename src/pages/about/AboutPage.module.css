@@ -1,0 +1,12 @@
+.page {
+  width: 100%;
+}
+
+.title {
+  margin-bottom: var(--size-32);
+}
+
+.content {
+  max-width: 800px;
+}
+

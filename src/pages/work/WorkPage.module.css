@@ -1,0 +1,36 @@
+.page {
+  width: 100%;
+}
+
+.title {
+  margin-bottom: var(--size-48);
+}
+
+.projects {
+  display: grid;
+  gap: var(--size-32);
+}
+
+.projectCard {
+  display: block;
+  padding: var(--size-24);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.projectCard:hover {
+  border-color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+.projectTitle {
+  margin-bottom: var(--size-12);
+  font-size: var(--font-size-xl);
+}
+
+.projectDescription {
+  margin: 0;
+  color: var(--color-text-subtle);
+}
+

@@ -1,0 +1,15 @@
+.sectionHeader {
+  margin-bottom: var(--size-48);
+}
+
+.title {
+  margin-bottom: var(--size-12);
+  font-size: var(--font-size-3xl);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-subtle);
+}
+
