@@ -1,42 +1,52 @@
-import { Link, useLocation } from '@tanstack/react-router';
+import { useLocation, useNavigate } from '@tanstack/react-router';
 import { routes } from '../../lib/routes';
-import css from './Nav.module.css';
+import { Tabs, TabsList, TabsTrigger } from '../ui/tabs';
+import { Button } from '../ui/button';
+import { AvatarLink } from './AvatarLink';
 
 const navItems = [
-  { path: routes.about, label: 'About' },
-  { path: routes.work, label: 'Work' },
-  { path: routes.sandbox, label: 'Sandbox' },
+  { path: routes.about, label: 'About', value: 'about' },
+  { path: routes.work, label: 'Work', value: 'work' },
+  { path: routes.sandbox, label: 'Sandbox', value: 'sandbox' },
 ];
 
 export function Nav() {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentPath = location.pathname;
 
+  // Determine active tab value
+  const getActiveValue = () => {
+    if (currentPath === routes.about || currentPath === routes.index) return 'about';
+    if (currentPath.startsWith('/work')) return 'work';
+    if (currentPath === routes.sandbox) return 'sandbox';
+    return 'about';
+  };
+
+  const handleValueChange = (value: string) => {
+    const item = navItems.find((item) => item.value === value);
+    if (item) {
+      navigate({ to: item.path });
+    }
+  };
+
   return (
-    <nav className={css.nav}>
-      <div className={css.container}>
-        <Link to={routes.index} className={css.logo}>
-          Portfolio
-        </Link>
-        <ul className={css.navList}>
-          {navItems.map((item) => {
-            const isActive =
-              currentPath === item.path ||
-              (item.path === routes.work && currentPath.startsWith('/work'));
-            return (
-              <li key={item.path}>
-                <Link
-                  to={item.path}
-                  className={`${css.navLink} ${isActive ? css.active : ''}`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+    <nav className="sticky top-0 z-[100] border-b border-border bg-background">
+      <div className="flex items-center justify-between max-w-[1000px] mx-auto p-5">
+        <AvatarLink />
+        <Tabs value={getActiveValue()} onValueChange={handleValueChange}>
+          <TabsList>
+            {navItems.map((item) => (
+              <TabsTrigger key={item.path} value={item.value}>
+                {item.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </Tabs>
+        <Button variant="secondary" size="sm">
+          Reach out
+        </Button>
       </div>
     </nav>
   );
 }
-

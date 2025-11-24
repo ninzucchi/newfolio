@@ -2,9 +2,10 @@ import { Outlet, useLocation } from '@tanstack/react-router';
 import { useEffect } from 'react';
 import { Nav } from '../../components/nav/Nav';
 import { Footer } from '../../components/footer/Footer';
-import css from './PageLayout.module.css';
+import { Page } from './Page';
+import { Content } from './Content';
 
-export function RootLayout() {
+export function Root() {
   const location = useLocation();
 
   useEffect(() => {
@@ -12,13 +13,12 @@ export function RootLayout() {
   }, [location.pathname]);
 
   return (
-    <div className={css.root}>
+    <Page>
       <Nav />
-      <main className={css.main}>
+      <Content>
         <Outlet />
-      </main>
+      </Content>
       <Footer />
-    </div>
+    </Page>
   );
 }
-

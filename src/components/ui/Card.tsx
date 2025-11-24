@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import css from './Card.module.css';
+import { cn } from '../../lib/utils';
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'default' | 'elevated';
@@ -7,7 +7,15 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 export function Card({ variant = 'default', className = '', children, ...props }: CardProps) {
   return (
-    <div className={`${css.card} ${css[variant]} ${className}`} {...props}>
+    <div
+      className={cn(
+        'p-6 rounded-lg bg-background',
+        variant === 'default' && 'border border-border',
+        variant === 'elevated' && 'shadow-sm',
+        className
+      )}
+      {...props}
+    >
       {children}
     </div>
   );

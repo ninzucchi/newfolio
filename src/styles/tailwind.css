@@ -1,0 +1,27 @@
+@theme {
+  /* Colors - OKLCH format for perceptual uniformity */
+  --color-border: oklch(25.5% 0 0);
+  --color-background: oklch(0% 0 0);
+  --color-foreground: oklch(100% 0 0);
+  --color-primary: oklch(100% 0 0);
+  --color-primary-foreground: oklch(0% 0 0);
+  --color-secondary: oklch(65% 0 0);
+  --color-secondary-foreground: oklch(100% 0 0);
+  --color-muted: oklch(20.5% 0 0);
+  --color-muted-foreground: oklch(65% 0 0);
+  --color-accent: oklch(12.5% 0 0);
+  --color-accent-foreground: oklch(100% 0 0);
+  --color-destructive: oklch(65% 0.22 25);
+  --color-destructive-foreground: oklch(100% 0 0);
+  --color-ring: oklch(100% 0 0);
+  --color-input: oklch(25.5% 0 0);
+
+  /* Orange colors for links */
+  --color-link: oklch(70% 0.18 60);
+  --color-link-hover: oklch(60% 0.18 60);
+
+  /* Border radius */
+  --radius-lg: 8px;
+  --radius-md: 4px;
+  --radius-sm: 2px;
+}

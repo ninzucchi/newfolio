@@ -1,12 +1,12 @@
 import { createRouter, createRootRoute, createRoute } from '@tanstack/react-router';
-import { RootLayout } from './layout/RootLayout';
+import { Root } from './layout/Root';
 import { AboutPage } from '../pages/about/AboutPage';
 import { WorkPage } from '../pages/work/WorkPage';
 import { WorkProjectPage } from '../pages/work/WorkProjectPage';
 import { SandboxPage } from '../pages/sandbox/SandboxPage';
 
 const rootRoute = createRootRoute({
-  component: RootLayout,
+  component: Root,
 });
 
 const indexRoute = createRoute({
@@ -54,4 +54,3 @@ declare module '@tanstack/react-router' {
     router: typeof router;
   }
 }
-

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from '@tanstack/react-router';
-import css from './WorkPage.module.css';
+import { Text } from '../../components/ui/Text';
 
 const projects = [
   { slug: 'substack', title: 'Substack', description: 'Project description coming soon.' },
@@ -15,23 +15,22 @@ export function WorkPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className={css.page}
+      className="w-full"
     >
-      <h1 className={css.title}>Work</h1>
-      <div className={css.projects}>
+      <Text.H1 className="mb-12">Work</Text.H1>
+      <div className="grid gap-8">
         {projects.map((project) => (
           <Link
             key={project.slug}
             to="/work/$slug"
             params={{ slug: project.slug }}
-            className={css.projectCard}
+            className="block p-6 border border-border rounded transition-all hover:border-foreground hover:-translate-y-0.5"
           >
-            <h2 className={css.projectTitle}>{project.title}</h2>
-            <p className={css.projectDescription}>{project.description}</p>
+            <Text.H2 className="mb-3 text-xl">{project.title}</Text.H2>
+            <Text.P className="mb-0 text-muted-foreground">{project.description}</Text.P>
           </Link>
         ))}
       </div>
     </motion.div>
   );
 }
-

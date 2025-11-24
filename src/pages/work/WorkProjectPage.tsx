@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useParams } from '@tanstack/react-router';
-import css from './WorkProjectPage.module.css';
+import { Text } from '../../components/ui/Text';
 
 export function WorkProjectPage() {
   const { slug } = useParams({ from: '/work/$slug' });
@@ -11,11 +11,11 @@ export function WorkProjectPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className={css.page}
+      className="w-full"
     >
-      <h1 className={css.title}>{slug}</h1>
-      <div className={css.content}>
-        <p>Project detail page for {slug}. Content coming soon.</p>
+      <Text.H1 className="mb-8 capitalize">{slug}</Text.H1>
+      <div className="max-w-[800px]">
+        <Text.P>Project detail page for {slug}. Content coming soon.</Text.P>
       </div>
     </motion.div>
   );
