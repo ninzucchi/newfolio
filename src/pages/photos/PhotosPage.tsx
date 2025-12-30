@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PhotosGridContainer } from '../../components/ui/Grid';
+import { Lightbox } from '../../components/ui/lightbox/Lightbox';
 import { Photo } from './Photo';
 
 const placeholderColors = [
@@ -23,6 +25,8 @@ const placeholderColors = [
 ];
 
 export function PhotosPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   // Generate array of placeholder images for the grid
   const placeholderImages = Array.from({ length: 32 }, (_, i) => {
     const color = placeholderColors[i % placeholderColors.length];
@@ -31,6 +35,18 @@ export function PhotosPage() {
       alt: `Photo ${i + 1}`,
     };
   });
+
+  const currentImage = openIndex !== null ? placeholderImages[openIndex] : null;
+
+  const handlePrev = () => {
+    if (openIndex === null) return;
+    setOpenIndex(openIndex === 0 ? placeholderImages.length - 1 : openIndex - 1);
+  };
+
+  const handleNext = () => {
+    if (openIndex === null) return;
+    setOpenIndex(openIndex === placeholderImages.length - 1 ? 0 : openIndex + 1);
+  };
 
   return (
     <motion.div
@@ -42,9 +58,24 @@ export function PhotosPage() {
     >
       <PhotosGridContainer>
         {placeholderImages.map((image, index) => (
-          <Photo key={index} src={image.src} alt={image.alt} />
+          <Photo key={index} src={image.src} alt={image.alt} onClick={() => setOpenIndex(index)} />
         ))}
       </PhotosGridContainer>
+
+      <Lightbox
+        isOpen={openIndex !== null}
+        onClose={() => setOpenIndex(null)}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      >
+        {currentImage && (
+          <img
+            src={currentImage.src}
+            alt={currentImage.alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+          />
+        )}
+      </Lightbox>
     </motion.div>
   );
 }

@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { PhotoThumbnail } from '../../components/ui/PhotoThumbnail';
-import { Lightbox } from '../../components/ui/lightbox/Lightbox';
 
 function PhotoContainer({ children }: { children: React.ReactNode }) {
   return (
@@ -13,24 +11,12 @@ function PhotoContainer({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Photo({ src, alt }: { src: string; alt: string }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export function Photo({ src, alt, onClick }: { src: string; alt: string; onClick: () => void }) {
   return (
-    <>
-      <PhotoContainer>
-        <button
-          type="button"
-          onClick={() => setIsOpen(true)}
-          className="h-full w-full cursor-pointer"
-        >
-          <PhotoThumbnail src={src} alt={alt} className="h-full w-full" />
-        </button>
-      </PhotoContainer>
-
-      <Lightbox isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <img src={src} alt={alt} className="max-h-[90vh] max-w-[90vw] object-contain" />
-      </Lightbox>
-    </>
+    <PhotoContainer>
+      <button type="button" onClick={onClick} className="h-full w-full cursor-pointer">
+        <PhotoThumbnail src={src} alt={alt} className="h-full w-full" />
+      </button>
+    </PhotoContainer>
   );
 }
