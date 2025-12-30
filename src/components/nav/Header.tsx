@@ -6,11 +6,10 @@ import { AvatarLink } from './AvatarLink';
 
 const navItems = [
   { path: routes.about, label: 'About', value: 'about' },
-  { path: routes.work, label: 'Work', value: 'work' },
-  { path: routes.sandbox, label: 'Sandbox', value: 'sandbox' },
+  { path: routes.photos, label: 'Photos', value: 'photos' },
 ];
 
-export function Nav() {
+export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const currentPath = location.pathname;
@@ -18,8 +17,7 @@ export function Nav() {
   // Determine active tab value
   const getActiveValue = () => {
     if (currentPath === routes.about || currentPath === routes.index) return 'about';
-    if (currentPath.startsWith('/work')) return 'work';
-    if (currentPath === routes.sandbox) return 'sandbox';
+    if (currentPath === routes.photos) return 'photos';
     return 'about';
   };
 
@@ -31,8 +29,8 @@ export function Nav() {
   };
 
   return (
-    <nav className="sticky top-0 z-[100] border-b border-border bg-background">
-      <div className="flex items-center justify-between max-w-[1000px] mx-auto p-5">
+    <nav className="border-border bg-background sticky top-0 z-[100] border-b">
+      <div className="mx-auto flex max-w-[640px] items-center justify-between p-5">
         <AvatarLink />
         <Tabs value={getActiveValue()} onValueChange={handleValueChange}>
           <TabsList>
@@ -43,9 +41,7 @@ export function Nav() {
             ))}
           </TabsList>
         </Tabs>
-        <Button variant="secondary" size="sm">
-          Reach out
-        </Button>
+        <Button>Reach out</Button>
       </div>
     </nav>
   );

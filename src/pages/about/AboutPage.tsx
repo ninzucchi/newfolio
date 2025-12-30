@@ -1,6 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Text } from '../../components/ui/Text';
+import { Section } from '../../components/ui/Section';
+import { SectionHeader } from '../../components/text/SectionHeader';
+import { TextLink } from '../../components/ui/TextLink';
+import {
+  GridContainerThree,
+  GridContainerTwo,
+  GridColumnIcon,
+  GridColumnTitle,
+  GridColumnDate,
+} from '../../components/ui/Grid';
+import { IconContainer } from '../../components/ui/IconContainer';
+import { SubstackIcon } from '../../components/icons/SubstackIcon';
+import { MetaIcon } from '../../components/icons/MetaIcon';
+import { IDEOIcon } from '../../components/icons/IDEOIcon';
 
 const experience = [
   {
@@ -8,18 +22,21 @@ const experience = [
     companyUrl: 'https://substack.com',
     role: 'Senior Product Designer',
     period: '2020-Present',
+    icon: SubstackIcon,
   },
   {
     company: 'Meta',
     companyUrl: 'https://meta.com',
     role: 'Product Design Lead',
     period: '2016-2020',
+    icon: MetaIcon,
   },
   {
     company: 'IDEO',
     companyUrl: 'https://ideo.com',
     role: 'Interaction Design Lead',
     period: '2012-2016',
+    icon: IDEOIcon,
   },
 ];
 
@@ -44,117 +61,91 @@ export function AboutPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="w-full"
+      transition={{ duration: 0.5 }}
+      className="flex w-full flex-col gap-16"
     >
       {/* Bio Section */}
-      <section className="mb-12">
-        <div className="space-y-4">
-          <Text.H1 className="text-2xl font-medium">Hi, I'm Nick.</Text.H1>
-          <Text.P className="text-secondary-foreground leading-relaxed mb-0">
-            I'm a product designer and front-end engineer at{' '}
-            <a
-              className="text-link hover:text-link-hover transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://substack.com"
-            >
-              Substack
-            </a>
-            , where we're creating a new economic engine for culture.
-          </Text.P>
-          <Text.P className="text-secondary-foreground leading-relaxed mb-0">
-            Before Substack, I developed features at{' '}
-            <a
-              className="text-link hover:text-link-hover transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://meta.com"
-            >
-              Meta
-            </a>{' '}
-            to protect the platform from abuse, ensure fair elections, and respond to global
-            security threats.
-          </Text.P>
-          <Text.P className="text-secondary-foreground leading-relaxed mb-0">
-            Prior to that, I was an interaction designer at{' '}
-            <a
-              className="text-link hover:text-link-hover transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://ideo.com"
-            >
-              IDEO
-            </a>
-            , where I helped global brands like Google, Ford, Bayer and American Express launch
-            best-in-class digital experiences.
-          </Text.P>
-          <Text.P className="text-secondary-foreground leading-relaxed mb-0">
-            I live in the Mission, San Francisco.
-          </Text.P>
-        </div>
-      </section>
+      <Section>
+        <Text.H1 className="text-2xl font-medium">Hi, I'm Nick.</Text.H1>
+        <Text.B3>
+          I'm a product designer and front-end engineer at{' '}
+          <TextLink newTab href="https://substack.com" className="underline">
+            Substack
+          </TextLink>
+          , where we're creating a new economic engine for culture.
+        </Text.B3>
+        <Text.B3>
+          Before Substack, I developed features at{' '}
+          <TextLink newTab href="https://meta.com" className="underline">
+            Meta
+          </TextLink>{' '}
+          to protect the platform from abuse, ensure fair elections, and respond to global security
+          threats.
+        </Text.B3>
+        <Text.B3>
+          Prior to that, I was an interaction designer at{' '}
+          <TextLink newTab href="https://ideo.com" className="underline">
+            IDEO
+          </TextLink>
+          , where I helped global brands like Google, Ford, Bayer and American Express launch
+          best-in-class digital experiences.
+        </Text.B3>
+        <Text.B3>I live in the Mission, San Francisco.</Text.B3>
+      </Section>
 
-      {/* Separator */}
-      <div
-        data-orientation="horizontal"
-        role="none"
-        className="bg-border shrink-0 h-px w-full mb-12"
-      />
+      <Section>
+        <SectionHeader>Experience</SectionHeader>
+        <GridContainerThree>
+          {experience.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <React.Fragment key={index}>
+                <GridColumnIcon>
+                  <IconContainer>
+                    <IconComponent className="text-fg-primary" size={20} />
+                  </IconContainer>
+                </GridColumnIcon>
+                <GridColumnTitle>
+                  <TextLink
+                    newTab
+                    href={item.companyUrl}
+                    className="hover:text-foreground underline"
+                  >
+                    {item.company}
+                  </TextLink>
+                  <Text.B4 className="text-fg-secondary">{item.role}</Text.B4>
+                </GridColumnTitle>
+                <GridColumnDate>
+                  <Text.B4 className="text-fg-secondary">{item.period}</Text.B4>
+                </GridColumnDate>
+              </React.Fragment>
+            );
+          })}
+        </GridContainerThree>
+      </Section>
 
-      {/* Experience Section */}
-      <section className="mb-12">
-        <Text.H2 className="text-[11px] uppercase tracking-wider text-muted-foreground mb-6 font-medium">
-          Experience
-        </Text.H2>
-        <div className="grid grid-cols-5 gap-y-4">
-          {experience.map((item, index) => (
-            <React.Fragment key={index}>
-              <div className="col-span-2">
-                <a
-                  className="hover:text-foreground transition-colors"
-                  href={item.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {item.company}
-                </a>
-              </div>
-              <div className="col-span-3">
-                <Text.P className="mb-0">{item.role}</Text.P>
-                <Text.P className="text-sm text-muted-foreground mb-0">{item.period}</Text.P>
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-
-      {/* Credentials Section */}
-      <section className="mb-12">
-        <Text.H2 className="text-[11px] uppercase tracking-wider text-muted-foreground mb-6 font-medium">
-          Credentials
-        </Text.H2>
-        <div className="grid grid-cols-5 gap-y-4">
+      <Section>
+        <SectionHeader>Education</SectionHeader>
+        <GridContainerTwo>
           {credentials.map((item, index) => (
             <React.Fragment key={index}>
-              <div className="col-span-2">
-                <a
-                  className="hover:text-foreground transition-colors"
+              <GridColumnTitle>
+                <TextLink
+                  newTab
                   href={item.institutionUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  className="hover:text-foreground underline"
                 >
                   {item.institution}
-                </a>
-              </div>
-              <div className="col-span-3">
-                <Text.P className="mb-0">{item.degree}</Text.P>
-                <Text.P className="text-sm text-muted-foreground mb-0">{item.year}</Text.P>
-              </div>
+                </TextLink>
+                <Text.B4 className="text-fg-secondary">{item.degree}</Text.B4>
+              </GridColumnTitle>
+              <GridColumnDate>
+                <Text.B4 className="text-fg-secondary">{item.year}</Text.B4>
+              </GridColumnDate>
             </React.Fragment>
           ))}
-        </div>
-      </section>
+        </GridContainerTwo>
+      </Section>
     </motion.div>
   );
 }

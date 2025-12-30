@@ -1,24 +1,23 @@
 @theme {
-  /* Colors - OKLCH format for perceptual uniformity */
-  --color-border: oklch(25.5% 0 0);
-  --color-background: oklch(0% 0 0);
-  --color-foreground: oklch(100% 0 0);
-  --color-primary: oklch(100% 0 0);
-  --color-primary-foreground: oklch(0% 0 0);
-  --color-secondary: oklch(65% 0 0);
-  --color-secondary-foreground: oklch(100% 0 0);
-  --color-muted: oklch(20.5% 0 0);
-  --color-muted-foreground: oklch(65% 0 0);
-  --color-accent: oklch(12.5% 0 0);
-  --color-accent-foreground: oklch(100% 0 0);
-  --color-destructive: oklch(65% 0.22 25);
-  --color-destructive-foreground: oklch(100% 0 0);
-  --color-ring: oklch(100% 0 0);
-  --color-input: oklch(25.5% 0 0);
+  /* Foreground colors (text) - use with text-{name} */
+  --color-fg-primary: oklch(99% 0 0);
+  --color-fg-secondary: oklch(66% 0 0);
+  --color-fg-tertiary: oklch(33% 0 0);
 
-  /* Orange colors for links */
-  --color-link: oklch(70% 0.18 60);
-  --color-link-hover: oklch(60% 0.18 60);
+  /* Background colors (surfaces) - use with bg-{name} */
+  --color-bg-primary: oklch(3% 0 0);
+  --color-bg-secondary: oklch(15% 0 0);
+  --color-bg-tertiary: oklch(20.5% 0 0);
+
+  /* Compatibility aliases for shadcn/ui components */
+  --color-background: var(--color-bg-primary);
+  --color-muted: var(--color-bg-secondary);
+  --color-foreground: var(--color-fg-primary);
+  --color-muted-foreground: var(--color-fg-secondary);
+
+  /* UI element colors */
+  --color-border: oklch(25% 0 0);
+  --color-ring: oklch(100% 0 0);
 
   /* Border radius */
   --radius-lg: 8px;

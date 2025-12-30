@@ -1,16 +1,17 @@
 import type { HTMLAttributes } from 'react';
 import { cn } from '../../lib/utils';
 
-interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'elevated';
-}
-
-export function Card({ variant = 'default', className = '', children, ...props }: CardProps) {
+export function Card({
+  variant = 'default',
+  className = '',
+  children,
+  ...props
+}: HTMLAttributes<HTMLDivElement> & { variant?: 'default' | 'elevated' }) {
   return (
     <div
       className={cn(
-        'p-6 rounded-lg bg-background',
-        variant === 'default' && 'border border-border',
+        'bg-background rounded-lg p-6',
+        variant === 'default' && 'border-border border',
         variant === 'elevated' && 'shadow-sm',
         className
       )}
@@ -20,4 +21,3 @@ export function Card({ variant = 'default', className = '', children, ...props }
     </div>
   );
 }
-

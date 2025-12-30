@@ -5,5 +5,5 @@ interface ContentProps {
 }
 
 export function Content({ children }: ContentProps) {
-  return <main className="flex-1 w-full max-w-[1000px] mx-auto py-8 px-6">{children}</main>;
+  return <main className="mx-auto w-full max-w-[640px] flex-1 px-6 py-8">{children}</main>;
 }

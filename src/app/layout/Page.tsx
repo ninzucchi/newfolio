@@ -5,5 +5,5 @@ interface PageProps {
 }
 
 export function Page({ children }: PageProps) {
-  return <div className="flex flex-col min-h-screen">{children}</div>;
+  return <div className="flex min-h-screen flex-col">{children}</div>;
 }

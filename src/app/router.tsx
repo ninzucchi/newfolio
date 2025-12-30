@@ -1,9 +1,7 @@
 import { createRouter, createRootRoute, createRoute } from '@tanstack/react-router';
 import { Root } from './layout/Root';
 import { AboutPage } from '../pages/about/AboutPage';
-import { WorkPage } from '../pages/work/WorkPage';
-import { WorkProjectPage } from '../pages/work/WorkProjectPage';
-import { SandboxPage } from '../pages/sandbox/SandboxPage';
+import { PhotosPage } from '../pages/photos/PhotosPage';
 
 const rootRoute = createRootRoute({
   component: Root,
@@ -21,31 +19,13 @@ const aboutRoute = createRoute({
   component: AboutPage,
 });
 
-const workRoute = createRoute({
+const photosRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: '/work',
-  component: WorkPage,
+  path: '/photos',
+  component: PhotosPage,
 });
 
-const workProjectRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/work/$slug',
-  component: WorkProjectPage,
-});
-
-const sandboxRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/sandbox',
-  component: SandboxPage,
-});
-
-const routeTree = rootRoute.addChildren([
-  indexRoute,
-  aboutRoute,
-  workRoute,
-  workProjectRoute,
-  sandboxRoute,
-]);
+const routeTree = rootRoute.addChildren([indexRoute, aboutRoute, photosRoute]);
 
 export const router = createRouter({ routeTree });
 

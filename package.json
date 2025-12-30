@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\" \"*.{js,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css}\" \"*.{js,json,md}\""
   },
   "dependencies": {
     "@hugeicons/react": "^1.1.1",
@@ -42,6 +44,7 @@
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.17",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
