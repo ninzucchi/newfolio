@@ -3,14 +3,14 @@ import { Text } from '../../components/ui/Text';
 import { Section } from '../../components/ui/Section';
 import { SectionHeader } from '../../components/text/SectionHeader';
 import { TextLink } from '../../components/ui/TextLink';
-import { GridContainerTwo, GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
+import { EducationGridContainer, GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
 import { education } from '../../lib/data';
 
 export function EducationSection() {
   return (
     <Section>
       <SectionHeader>Education</SectionHeader>
-      <GridContainerTwo>
+      <EducationGridContainer>
         {education.map((item, index) => (
           <React.Fragment key={index}>
             <GridColumnMain>
@@ -28,7 +28,7 @@ export function EducationSection() {
             </GridColumnDate>
           </React.Fragment>
         ))}
-      </GridContainerTwo>
+      </EducationGridContainer>
     </Section>
   );
 }

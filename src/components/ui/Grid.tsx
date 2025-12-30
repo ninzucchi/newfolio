@@ -1,14 +1,27 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-export function GridContainerThree({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+export function ExperienceGridContainer({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn('grid grid-cols-[auto_2fr_3fr] gap-x-4 gap-y-4', className)} {...props} />
+    <div className={cn('grid grid-cols-[auto_1fr_auto] gap-x-4 gap-y-6', className)} {...props} />
   );
 }
 
-export function GridContainerTwo({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('grid grid-cols-[2fr_3fr] gap-x-4 gap-y-4', className)} {...props} />;
+export function EducationGridContainer({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn('grid grid-cols-[1fr_auto] gap-x-4 gap-y-6', className)} {...props} />;
+}
+
+export function ProjectsGridContainer({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn('grid grid-cols-[1fr_auto] gap-x-4 gap-y-6', className)} {...props} />;
 }
 
 export function GridColumnIcon({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
@@ -16,9 +29,9 @@ export function GridColumnIcon({ className, ...props }: React.HTMLAttributes<HTM
 }
 
 export function GridColumnMain({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('flex flex-col gap-1', className)} {...props} />;
+  return <div className={cn('flex flex-col items-start gap-0.5', className)} {...props} />;
 }
 
 export function GridColumnDate({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('flex flex-col text-right', className)} {...props} />;
+  return <div className={cn('flex flex-col items-end text-right', className)} {...props} />;
 }

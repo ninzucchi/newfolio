@@ -6,7 +6,7 @@ export const experience = [
   {
     company: 'Substack',
     companyUrl: 'https://substack.com',
-    role: 'Product Design Lead',
+    role: 'Product Design Lead, Design Engineer',
     period: '2020-Present',
     icon: SubstackIcon,
   },
@@ -38,5 +38,109 @@ export const education = [
     institutionUrl: 'https://vassar.edu',
     degree: 'BA, Cognitive Science',
     year: '2011',
+  },
+];
+
+export const projects = [
+  // Substack projects
+  {
+    title: 'Substack design system',
+    description:
+      'Established the foundational UI and component architecture powering all new Substack product development.',
+    year: '2025',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Substack creator dashboard',
+    description:
+      'Re-architected the primary creator control surface to streamline publishing, analytics, and subscriber management.',
+    year: '2025',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Substack mobile app',
+    description:
+      "Extended Substack's core publishing workflow to mobile with full-fidelity drafting and editing.",
+    year: '2024',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Substack web app',
+    description:
+      'Translated the Substack mobile app into a best-in-class desktop reading experience.',
+    year: '2024',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Substack Notes',
+    description:
+      'Helped evolve Substack from a single-player publishing tool into a multi-player social platform.',
+    year: '2023',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Substack Chat',
+    description:
+      'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
+    year: '2022',
+    images: ['/placeholder.svg'],
+  },
+  // Meta projects
+  {
+    title: 'Facebook lightweight feedback',
+    description:
+      'Introduced a low-friction signal for dismissing feed content, enabling users to train ranking systems through negative feedback.',
+    year: '2020',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Facebook community notes',
+    description:
+      'Developed a crowdsourced verification system for evaluating claims at scale, reducing reliance on centralized fact-checking organizations.',
+    year: '2019',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Facebook blood donations',
+    description:
+      'Created a platform-wide system for requesting and fulfilling blood donations, connecting donors and organizations to address acute shortages.',
+    year: '2018',
+    images: ['/placeholder.svg'],
+  },
+  // IDEO projects
+  {
+    title: 'American Express Pay-it / Plan-it',
+    description:
+      'Designed a pair of swipe-based repayment tools to reduce debt anxiety and make payments easier to manage.',
+    year: '2015',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Google Kubits',
+    description:
+      'Developed a physical, game-driven system that taught core programming concepts through modular, code-like play.',
+    year: '2014',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Bayer Contour One',
+    description:
+      'Created a connected hardware and app ecosystem that made glucose, insulin, and lifestyle data legible and actionable for patients and clinicians.',
+    year: '2014',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'NFL TV app experience',
+    description:
+      'Defined early UI patterns for browsing live games, highlights, and archives on smart TVs.',
+    year: '2013',
+    images: ['/placeholder.svg'],
+  },
+  {
+    title: 'Ford driver experience',
+    description:
+      'Designed steering-wheel–driven interfaces that centralized navigation, media, and communication into a hands-on, eyes-up driving experience.',
+    year: '2012',
+    images: ['/placeholder.svg'],
   },
 ];

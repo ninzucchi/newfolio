@@ -2,7 +2,7 @@
   /* Foreground colors (text) - use with text-{name} */
   --color-fg-primary: oklch(99% 0 0);
   --color-fg-secondary: oklch(66% 0 0);
-  --color-fg-tertiary: oklch(33% 0 0);
+  --color-fg-tertiary: oklch(40% 0 0);
 
   /* Background colors (surfaces) - use with bg-{name} */
   --color-bg-primary: oklch(3% 0 0);
@@ -21,6 +21,6 @@
 
   /* Border radius */
   --radius-lg: 8px;
-  --radius-md: 4px;
-  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-sm: 4px;
 }

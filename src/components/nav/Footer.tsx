@@ -8,7 +8,7 @@ import { TextLink } from '@/components/ui/TextLink';
 
 export function Footer() {
   return (
-    <footer className="bg-background mt-auto">
+    <footer className="bg-background sticky bottom-0 mt-auto">
       <div className="mx-auto flex max-w-[640px] flex-row items-center justify-between gap-0 p-5">
         <Text.B4 className="text-fg-secondary">
           <TextLink href="mailto:ninzucchi@gmail.com" className="hover:text-foreground underline">

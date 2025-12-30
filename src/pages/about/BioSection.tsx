@@ -16,13 +16,13 @@ export function BioSection() {
 
 function Header() {
   return (
-    <div className="flex items-center gap-4">
-      <Avatar className="h-10 w-10">
+    <div className="flex items-center gap-4 pb-6">
+      <Avatar className="h-11 w-11">
         <AvatarImage src={avatarImage} alt="Nick Inzucchi" />
       </Avatar>
       <GridColumnMain>
-        <Text.B3>Nick Inzucchi</Text.B3>
-        <Text.B4 className="text-fg-secondary">Product Design Lead at Substack</Text.B4>
+        <Text.B1>Nick Inzucchi</Text.B1>
+        <Text.B4 className="text-fg-secondary">Designer, engineer, product generalist</Text.B4>
       </GridColumnMain>
     </div>
   );
@@ -32,29 +32,28 @@ function Bio() {
   return (
     <>
       <Text.B3>
-        I'm a product designer and front-end engineer at{' '}
+        I'm a product design lead and design engineer at{' '}
         <TextLink newTab href="https://substack.com" className="underline">
           Substack
         </TextLink>
-        , where we're creating a new economic engine for culture.
+        , where I work on core publishing, social, and platform features.
       </Text.B3>
       <Text.B3>
-        Before Substack, I developed features at{' '}
+        Previously, I built integrity and safety features at{' '}
         <TextLink newTab href="https://meta.com" className="underline">
           Meta
         </TextLink>{' '}
-        to protect the platform from abuse, ensure fair elections, and respond to global security
-        threats.
+        including tools for elections, preventing abuse, and responding to global security threats.
       </Text.B3>
       <Text.B3>
-        Prior to that, I was an interaction designer at{' '}
+        Before that, I was an interaction designer at{' '}
         <TextLink newTab href="https://ideo.com" className="underline">
           IDEO
         </TextLink>
-        , where I helped global brands like Google, Ford, Bayer and American Express launch
-        best-in-class digital experiences.
+        , working with teams at Google, Ford, Bayer, and American Express to build best-in-class
+        digital products.
       </Text.B3>
-      <Text.B3>I live in the Mission, San Francisco.</Text.B3>
+      <Text.B3>Based in San Francisco.</Text.B3>
     </>
   );
 }

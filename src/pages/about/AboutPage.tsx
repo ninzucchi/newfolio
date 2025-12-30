@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { BioSection } from './BioSection';
 import { ExperienceSection } from './ExperienceSection';
 import { EducationSection } from './EducationSection';
+import { ProjectsSection } from './ProjectsSection';
 
 export function AboutPage() {
   return (
@@ -10,11 +11,12 @@ export function AboutPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex w-full flex-col gap-16"
+      className="flex w-full flex-col gap-16 pt-20 pb-20"
     >
       <BioSection />
       <ExperienceSection />
       <EducationSection />
+      <ProjectsSection />
     </motion.div>
   );
 }

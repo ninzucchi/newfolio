@@ -4,7 +4,7 @@ import { Section } from '../../components/ui/Section';
 import { SectionHeader } from '../../components/text/SectionHeader';
 import { TextLink } from '../../components/ui/TextLink';
 import {
-  GridContainerThree,
+  ExperienceGridContainer,
   GridColumnIcon,
   GridColumnMain,
   GridColumnDate,
@@ -16,7 +16,7 @@ export function ExperienceSection() {
   return (
     <Section>
       <SectionHeader>Experience</SectionHeader>
-      <GridContainerThree>
+      <ExperienceGridContainer>
         {experience.map((item, index) => {
           const IconComponent = item.icon;
           return (
@@ -38,7 +38,7 @@ export function ExperienceSection() {
             </React.Fragment>
           );
         })}
-      </GridContainerThree>
+      </ExperienceGridContainer>
     </Section>
   );
 }

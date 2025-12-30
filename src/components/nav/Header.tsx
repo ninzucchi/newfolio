@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from '@tanstack/react-router';
 import { routes } from '../../lib/routes';
 import { Tabs, TabsList, TabsTrigger } from '../ui/tabs';
-import { Button } from '../ui/button';
 
 const navItems = [
   { path: routes.about, label: 'About', value: 'about' },
@@ -28,8 +27,8 @@ export function Header() {
   };
 
   return (
-    <nav className="border-border bg-background sticky top-0 z-[100] border-b">
-      <div className="mx-auto flex max-w-[640px] items-center justify-between p-5">
+    <nav className="border-border bg-background sticky top-0 z-[100]">
+      <div className="mx-auto flex max-w-[640px] items-center justify-center p-5">
         <Tabs value={getActiveValue()} onValueChange={handleValueChange}>
           <TabsList>
             {navItems.map((item) => (
@@ -39,7 +38,6 @@ export function Header() {
             ))}
           </TabsList>
         </Tabs>
-        <Button>Reach out</Button>
       </div>
     </nav>
   );

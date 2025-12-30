@@ -12,7 +12,7 @@ export function TextLink({
   return (
     <a
       className={cn(
-        'decoration-fg-tertiary [text-decoration-thickness:0.5px] [text-underline-offset:0.25em]',
+        'decoration-fg-tertiary [text-decoration-thickness:1px] [text-underline-offset:0.2em]',
         className
       )}
       style={
