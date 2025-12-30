@@ -1,5 +1,5 @@
-import React from 'react';
 import { Text } from '../../components/ui/Text';
+import { Fragment } from 'react';
 import { Section } from '../../components/ui/Section';
 import { SectionHeader } from '../../components/text/SectionHeader';
 import { TextLink } from '../../components/ui/TextLink';
@@ -12,7 +12,7 @@ export function EducationSection() {
       <SectionHeader>Education</SectionHeader>
       <EducationGridContainer>
         {education.map((item, index) => (
-          <React.Fragment key={index}>
+          <Fragment key={index}>
             <GridColumnMain>
               <TextLink
                 newTab
@@ -26,7 +26,7 @@ export function EducationSection() {
             <GridColumnDate>
               <Text.B4 className="text-fg-secondary">{item.year}</Text.B4>
             </GridColumnDate>
-          </React.Fragment>
+          </Fragment>
         ))}
       </EducationGridContainer>
     </Section>

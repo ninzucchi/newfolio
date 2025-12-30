@@ -1,5 +1,5 @@
-import React from 'react';
 import { Text } from '../../components/ui/Text';
+import { Fragment } from 'react';
 import { Section } from '../../components/ui/Section';
 import { SectionHeader } from '../../components/text/SectionHeader';
 import { TextLink } from '../../components/ui/TextLink';
@@ -20,7 +20,7 @@ export function ExperienceSection() {
         {experience.map((item, index) => {
           const IconComponent = item.icon;
           return (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               <GridColumnIcon>
                 <IconContainer>
                   <IconComponent className="text-fg-primary" size={20} />
@@ -35,7 +35,7 @@ export function ExperienceSection() {
               <GridColumnDate>
                 <Text.B4 className="text-fg-secondary">{item.period}</Text.B4>
               </GridColumnDate>
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </ExperienceGridContainer>
