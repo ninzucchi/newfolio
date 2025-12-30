@@ -30,7 +30,7 @@ export function Header() {
     <nav
       className="sticky top-0 z-1 backdrop-blur-md"
       style={{
-        backgroundColor: 'oklch(3% 0 0 / 0.55)',
+        backgroundColor: 'oklch(5% 0 0 / 0.85)',
       }}
     >
       <div className="mx-auto flex max-w-[640px] items-center justify-center p-5">

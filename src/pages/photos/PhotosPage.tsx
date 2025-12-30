@@ -38,14 +38,17 @@ export function PhotosPage() {
 
   const currentImage = openIndex !== null ? placeholderImages[openIndex] : null;
 
+  const hasPrev = openIndex !== null && openIndex > 0;
+  const hasNext = openIndex !== null && openIndex < placeholderImages.length - 1;
+
   const handlePrev = () => {
-    if (openIndex === null) return;
-    setOpenIndex(openIndex === 0 ? placeholderImages.length - 1 : openIndex - 1);
+    if (openIndex === null || !hasPrev) return;
+    setOpenIndex(openIndex - 1);
   };
 
   const handleNext = () => {
-    if (openIndex === null) return;
-    setOpenIndex(openIndex === placeholderImages.length - 1 ? 0 : openIndex + 1);
+    if (openIndex === null || !hasNext) return;
+    setOpenIndex(openIndex + 1);
   };
 
   return (
@@ -65,8 +68,8 @@ export function PhotosPage() {
       <Lightbox
         isOpen={openIndex !== null}
         onClose={() => setOpenIndex(null)}
-        onPrev={handlePrev}
-        onNext={handleNext}
+        onPrev={hasPrev ? handlePrev : undefined}
+        onNext={hasNext ? handleNext : undefined}
       >
         {currentImage && (
           <img
