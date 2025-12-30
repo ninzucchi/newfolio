@@ -24,8 +24,8 @@ function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimi
         'h-9 gap-2 px-1 py-1',
         // Colors
         'bg-bg-secondary',
-        // Border
-        'border-border rounded-md border',
+        // Outline
+        'rounded-md outline-1 -outline-offset-1',
         // Interactive states
         'transition-all duration-250 ease-in-out',
         className
@@ -53,7 +53,7 @@ function TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPr
         // Focus states
         'focus-visible:ring-ring outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         // Interactive states
-        'cursor-pointer transition-all duration-250 ease-in-out disabled:pointer-events-none disabled:opacity-50',
+        'cursor-pointer transition-all duration-250 ease-in-out select-none disabled:pointer-events-none disabled:opacity-50',
         // SVG children
         '[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*="size-"])]:size-4',
         className

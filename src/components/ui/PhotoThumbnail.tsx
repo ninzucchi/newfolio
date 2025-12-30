@@ -13,8 +13,11 @@ export function PhotoThumbnail({
     <img
       src={src}
       alt={alt}
-      className={cn('border-border h-auto w-full rounded-none border object-cover', className)}
+      draggable={false}
+      className={cn(
+        'h-auto w-full cursor-zoom-in rounded-none object-cover select-none',
+        className
+      )}
     />
   );
 }
-

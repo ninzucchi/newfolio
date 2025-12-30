@@ -2,12 +2,35 @@ import { motion } from 'framer-motion';
 import { PhotosGridContainer } from '../../components/ui/Grid';
 import { Photo } from './Photo';
 
+const placeholderColors = [
+  'red',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'green',
+  'emerald',
+  'teal',
+  'cyan',
+  'sky',
+  'blue',
+  'indigo',
+  'violet',
+  'purple',
+  'fuchsia',
+  'pink',
+  'rose',
+];
+
 export function PhotosPage() {
   // Generate array of placeholder images for the grid
-  const placeholderImages = Array.from({ length: 32 }, (_, i) => ({
-    src: '/placeholder.svg',
-    alt: `Photo ${i + 1}`,
-  }));
+  const placeholderImages = Array.from({ length: 32 }, (_, i) => {
+    const color = placeholderColors[i % placeholderColors.length];
+    return {
+      src: `/placeholder-${color}.svg`,
+      alt: `Photo ${i + 1}`,
+    };
+  });
 
   return (
     <motion.div
