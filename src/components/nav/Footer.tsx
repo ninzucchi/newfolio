@@ -8,7 +8,13 @@ import { TextLink } from '@/components/ui/TextLink';
 
 export function Footer() {
   return (
-    <footer className="bg-background sticky bottom-0 mt-auto">
+    <footer
+      className="sticky bottom-0 mt-auto"
+      style={{
+        background:
+          'linear-gradient(to bottom, color-mix(in oklab, oklch(3% 0 0) 0%, transparent) 0%, color-mix(in oklab, oklch(3% 0 0) 90%, transparent) 50%, oklch(3% 0 0) 100%)',
+      }}
+    >
       <div className="mx-auto flex max-w-[640px] flex-row items-center justify-between gap-0 p-5">
         <Text.B4 className="text-fg-secondary">
           <TextLink href="mailto:ninzucchi@gmail.com" className="hover:text-foreground underline">

@@ -17,10 +17,11 @@
 
   /* UI element colors */
   --color-border: oklch(25% 0 0);
-  --color-ring: oklch(100% 0 0);
+  --color-ring: oklch(0.698 0.201 42.2);
 
   /* Border radius */
   --radius-lg: 8px;
   --radius-md: 6px;
   --radius-sm: 4px;
+  --radius-xs: 2px;
 }

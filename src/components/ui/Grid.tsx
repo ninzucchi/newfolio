@@ -23,6 +23,10 @@ export function ProjectsGridContainer({
   return <div className={cn('grid grid-cols-[1fr_auto] gap-x-4 gap-y-6', className)} {...props} />;
 }
 
+export function PhotosGridContainer({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn('grid grid-cols-3 gap-2', className)} {...props} />;
+}
+
 export function GridColumnIcon({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return <div className={cn('w-fit', className)} {...props} />;
 }
