@@ -15,7 +15,7 @@ export function GridColumnIcon({ className, ...props }: React.HTMLAttributes<HTM
   return <div className={cn('w-fit', className)} {...props} />;
 }
 
-export function GridColumnTitle({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+export function GridColumnMain({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return <div className={cn('flex flex-col gap-1', className)} {...props} />;
 }
 
