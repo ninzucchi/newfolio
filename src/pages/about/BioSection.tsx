@@ -3,7 +3,7 @@ import { Section } from '../../components/ui/Section';
 import { TextLink } from '../../components/ui/TextLink';
 import { GridColumnMain } from '../../components/ui/Grid';
 import { Avatar, AvatarImage } from '../../components/ui/avatar';
-import avatarImage from '../../assets/images/avatar.jpg';
+import avatarImage from '../../../public/avatar.jpg';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
 import { SocialLinks } from '../../components/ui/SocialLinks';
