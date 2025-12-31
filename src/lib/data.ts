@@ -48,12 +48,7 @@ export const projects = [
     description:
       'Established the foundational UI and component architecture powering all new Substack product development.',
     year: '2025',
-    images: [
-      '/placeholder-red.svg',
-      '/placeholder-orange.svg',
-      '/placeholder-amber.svg',
-      '/placeholder-yellow.svg',
-    ],
+    images: ['/projects/pencraft-01.jpg', '/projects/pencraft-02.jpg'],
   },
   {
     title: 'Substack creator dashboard',

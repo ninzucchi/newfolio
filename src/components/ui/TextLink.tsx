@@ -9,7 +9,10 @@ export function TextLink({
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { newTab?: boolean }) {
   return (
     <a
-      className={cn('decoration-fg-tertiary decoration-1 underline-offset-[0.2em]', className)}
+      className={cn(
+        'decoration-fg-tertiary condary decoration-1 underline-offset-[0.2em]',
+        className
+      )}
       target={newTab ? '_blank' : target}
       rel={newTab ? 'noopener noreferrer' : rel}
       {...props}

@@ -20,7 +20,7 @@ export function BioSection() {
 
 function Header() {
   return (
-    <div className="flex gap-8 items-center">
+    <div className="flex gap-4 items-center">
       <Avatar className="w-11 h-11">
         <AvatarImage src={avatarImage} alt="Nick Inzucchi" />
       </Avatar>

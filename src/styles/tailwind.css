@@ -2,16 +2,16 @@
   /* Foreground colors (text) - use with text-{name} */
   --color-fg-primary: oklch(99% 0 0);
   --color-fg-secondary: oklch(66% 0 0);
-  --color-fg-tertiary: oklch(40% 0 0);
+  --color-fg-tertiary: oklch(50% 0 0);
 
   /* Background colors (surfaces) - use with bg-{name} */
-  --color-bg-primary: oklch(5% 0 0);
-  --color-bg-secondary: oklch(20% 0 0);
-  --color-bg-tertiary: oklch(33% 0 0);
+  --color-primary: oklch(5% 0 0);
+  --color-secondary: oklch(20% 0 0);
+  --color-tertiary: oklch(33% 0 0);
 
   /* Compatibility aliases for shadcn/ui components */
-  --color-background: var(--color-bg-primary);
-  --color-muted: var(--color-bg-secondary);
+  --color-background: var(--color-primary);
+  --color-muted: var(--color-secondary);
   --color-foreground: var(--color-fg-primary);
   --color-muted-foreground: var(--color-fg-secondary);
 
