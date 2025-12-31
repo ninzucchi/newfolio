@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { Lightbox } from './lightbox/Lightbox';
+import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
 
 export function ProjectImage({
   src,
@@ -27,7 +28,7 @@ export function ProjectImage({
       </button>
 
       <Lightbox isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <img src={src} alt={alt} className="max-h-[90vh] max-w-[90vw] object-contain" />
+        <LightboxImage src={src} alt={alt} />
       </Lightbox>
     </>
   );

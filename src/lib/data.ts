@@ -144,3 +144,34 @@ export const projects = [
     images: ['/placeholder-purple.svg'],
   },
 ];
+
+export const gear = [
+  {
+    name: 'Fujifilm X-T5',
+    nameUrl:
+      'https://www.bhphotovideo.com/c/product/1899771-REG/fujifilm_16953857_x_t5_body_black_coo_japan.html',
+    category: 'Body',
+  },
+  {
+    name: 'Fujinon XF70-300mm f/4 - f/5.6',
+    nameUrl:
+      'https://www.bhphotovideo.com/c/product/1618891-REG/fujifilm_16666868_xf_70_300mm_f_4_5_6_r.html',
+    category: 'Lens',
+  },
+  {
+    name: 'Fujinon XF 50mm f/2 R WR',
+    nameUrl:
+      'https://www.bhphotovideo.com/c/product/1311239-REG/fujifilm_16536611_xf50mmf2_r_wr_mid.html',
+    category: 'Lens',
+  },
+  {
+    name: 'Fujinon XF 35mm f/2 R WR',
+    nameUrl: 'https://www.bhphotovideo.com/c/product/1191420-REG/fujifilm_xf_35mm_f_2_r.html',
+    category: 'Lens',
+  },
+  {
+    name: 'Fujinon XF 16mm f/1.4 R WR',
+    nameUrl: 'https://www.bhphotovideo.com/c/product/1138987-REG/fujifilm_xf_16mm_f_1_4_r.html',
+    category: 'Lens',
+  },
+];
