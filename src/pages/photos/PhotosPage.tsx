@@ -6,8 +6,6 @@ import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
 import { PhotoThumbnail } from '@/pages/photos/PhotoThumbnail';
 import { Text } from '@/components/ui/Text';
 import { GearSection } from '@/pages/about/GearSection';
-import { Avatar } from '@/components/ui/avatar';
-import { CameraIcon } from 'lucide-react';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import { photoIds } from '@/lib/photo-ids';
 
