@@ -66,7 +66,7 @@ export const projects = [
   {
     title: 'Substack notes',
     description:
-      'Helped evolve Substack from a single-player publishing tool into a multi-player social platform.',
+      'Introduced a new short-form format to help Substack evolve into a fully featured social platform.',
     year: '2023',
     images: ['/projects/notes-01.jpg', '/projects/notes-02.jpg', '/projects/notes-03.jpg'],
   },
@@ -92,8 +92,8 @@ export const projects = [
   {
     title: 'Substack mobile app',
     description:
-      "Extended Substack's core publishing workflow to mobile with full-fidelity drafting and editing.",
-    year: '2024',
+      'Repositioned Substack from a desktop-first publishing tool into an app-first product, spanning creation, consumption, social features, and more.',
+    year: '2022',
     images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
   },
   // Meta projects
