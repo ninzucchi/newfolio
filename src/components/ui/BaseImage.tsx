@@ -15,7 +15,7 @@ export function BaseImage({
       alt={alt}
       draggable={false}
       className={cn(
-        'object-cover w-full h-auto rounded-lg select-none outline-border outline outline-offset-0',
+        'object-cover w-full h-auto rounded-lg select-none outline-border outline-1 -outline-offset-1',
         className
       )}
     />

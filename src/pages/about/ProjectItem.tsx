@@ -2,6 +2,7 @@ import { Text } from '../../components/ui/Text';
 import { GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
 import { ProjectImage } from '../../components/ui/ProjectImage';
 import { ImageCarousel } from '../../components/ui/carousel/ImageCarousel';
+import { ProjectImagePlaceholder } from '@/pages/about/ProjectImagePlaceholder';
 
 export function ProjectItem({
   title,
@@ -36,13 +37,5 @@ export function ProjectItem({
         )}
       </div>
     </>
-  );
-}
-
-function ProjectImagePlaceholder() {
-  return (
-    <div className="flex justify-center items-center w-full rounded-lg bg-secondary outline-border aspect-video outline outline-offset-0">
-      <Text.B4 className="text-fg-secondary">Coming soon</Text.B4>
-    </div>
   );
 }
