@@ -2,7 +2,7 @@ import { Text } from '../../components/ui/Text';
 import { GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
 import { ProjectImage } from '../../components/ui/ProjectImage';
 import { ImageCarousel } from '../../components/ui/carousel/ImageCarousel';
-import { ProjectImagePlaceholder } from '@/pages/about/ProjectImagePlaceholder';
+import { ProjectImagePlaceholder } from '@/components/ui/ProjectImagePlaceholder';
 
 export function ProjectItem({
   title,

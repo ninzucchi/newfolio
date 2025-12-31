@@ -64,31 +64,36 @@ export const projects = [
     ],
   },
   {
-    title: 'Substack web app',
+    title: 'Substack notes',
+    description:
+      'Helped evolve Substack from a single-player publishing tool into a multi-player social platform.',
+    year: '2023',
+    images: ['/projects/notes-01.jpg', '/projects/notes-02.jpg', '/projects/notes-03.jpg'],
+  },
+  {
+    title: 'Substack web reader',
     description:
       'Translated the Substack mobile app into a best-in-class desktop reading experience.',
     year: '2024',
-    images: ['/projects/web-01.jpg', '/projects/web-02.jpg', '/projects/web-03.jpg'],
+    images: [
+      '/projects/reader-01.jpg',
+      '/projects/reader-02.jpg',
+      '/projects/reader-03.jpg',
+      '/projects/reader-04.jpg',
+    ],
+  },
+  {
+    title: 'Substack chat',
+    description:
+      'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
+    year: '2022',
+    images: ['/projects/chat-01.jpg', '/projects/chat-02.jpg', '/projects/chat-03.jpg'],
   },
   {
     title: 'Substack mobile app',
     description:
       "Extended Substack's core publishing workflow to mobile with full-fidelity drafting and editing.",
     year: '2024',
-    images: [],
-  },
-  {
-    title: 'Substack Notes',
-    description:
-      'Helped evolve Substack from a single-player publishing tool into a multi-player social platform.',
-    year: '2023',
-    images: [],
-  },
-  {
-    title: 'Substack Chat',
-    description:
-      'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
-    year: '2022',
     images: [],
   },
   // Meta projects
