@@ -27,12 +27,7 @@ export function Header() {
   };
 
   return (
-    <nav
-      className="sticky top-0 z-1 backdrop-blur-md"
-      style={{
-        backgroundColor: 'oklch(5% 0 0 / 0.85)',
-      }}
-    >
+    <nav className="sticky top-0 bg-nav-gradient z-1">
       <div className="mx-auto flex max-w-[640px] items-center justify-center p-5">
         <Tabs value={getActiveValue()} onValueChange={handleValueChange}>
           <TabsList>

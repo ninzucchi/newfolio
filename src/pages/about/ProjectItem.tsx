@@ -22,7 +22,7 @@ export function ProjectItem({
       <GridColumnDate>
         <Text.B4 className="text-fg-secondary">{year}</Text.B4>
       </GridColumnDate>
-      <div className="col-span-2 -mt-1 mb-6 flex flex-col gap-4">
+      <div className="flex flex-col col-span-2 gap-4 -mt-1 mb-6">
         {images.map((src, index) => (
           <ProjectImage key={index} src={src} alt={`${title} - Image ${index + 1}`} />
         ))}

@@ -18,13 +18,15 @@ function Button({
         // Layout
         'inline-flex shrink-0 items-center justify-center',
         // Size
-        'h-9 gap-2 px-4 py-2',
+        'h-8 gap-2 px-3 py-2',
         // Typography
         'text-sm font-medium whitespace-nowrap',
         // Colors
-        'bg-bg-secondary text-fg-primary hover:bg-bg-tertiary',
+        'bg-glass-bg blur-none backdrop-blur-md',
+        // Shadow
+        'shadow-glass',
         // Border
-        'border-border rounded-md border',
+        'glass-border rounded-full',
         // Focus states
         'focus-visible:ring-ring outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         // Interactive states

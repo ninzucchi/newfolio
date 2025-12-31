@@ -19,15 +19,17 @@ function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimi
       data-slot="tabs-list"
       className={cn(
         // Layout
-        'inline-flex shrink-0 items-center justify-center',
+        'inline-flex justify-center items-center shrink-0',
         // Size
-        'h-9 gap-2 px-1 py-1',
+        'gap-2 px-1 py-1 h-10',
         // Colors
-        'bg-bg-secondary',
+        'blur-none backdrop-blur-md bg-glass-bg',
+        // Shadow
+        'shadow-glass',
+        // Border
+        'glass-border',
         // Outline
-        'rounded-md outline-1 -outline-offset-1',
-        // Interactive states
-        'transition-all duration-250 ease-in-out',
+        'rounded-full',
         className
       )}
       {...props}
@@ -47,9 +49,9 @@ function TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPr
         // Typography
         'text-sm font-medium whitespace-nowrap',
         // Colors
-        'text-fg-secondary data-[state=active]:bg-bg-tertiary data-[state=active]:text-fg-primary',
+        'text-fg-secondary hover:text-fg-primary data-[state=active]:text-fg-primary data-[state=active]:bg-white/10 data-[state=active]:shadow-[inset_0_0_2px_rgba(255,255,255,0.04)]',
         // Border
-        'rounded-sm',
+        'rounded-full',
         // Focus states
         'focus-visible:ring-ring outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         // Interactive states

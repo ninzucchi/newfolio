@@ -52,18 +52,18 @@ export function Lightbox({
   return (
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Dialog.Portal forceMount>
-        <AnimatePresence>
-          {isOpen && (
+      <AnimatePresence>
+        {isOpen && (
             <LightboxLayout>
               <Dialog.Overlay
                 forceMount
                 className="absolute inset-0 bg-black/95"
                 onClick={onClose}
               />
-              <Dialog.Content
-                forceMount
-                onOpenAutoFocus={(e) => e.preventDefault()}
-                onCloseAutoFocus={(e) => e.preventDefault()}
+            <Dialog.Content
+              forceMount
+              onOpenAutoFocus={(e) => e.preventDefault()}
+              onCloseAutoFocus={(e) => e.preventDefault()}
                 className="pointer-events-none absolute inset-0 flex items-center justify-center"
                 style={{ pointerEvents: 'none' }}
               >
@@ -71,15 +71,15 @@ export function Lightbox({
                   <Dialog.Title>Photo</Dialog.Title>
                 </VisuallyHidden.Root>
                 <Dialog.Close className="pointer-events-auto absolute top-4 right-4">
-                  <MediaIconButton icon={X} aria-label="Close lightbox" />
+                    <MediaIconButton icon={X} aria-label="Close lightbox" />
                 </Dialog.Close>
                 {onPrev && <LightboxNavButton direction="prev" onClick={onPrev} />}
                 {onNext && <LightboxNavButton direction="next" onClick={onNext} />}
                 <LightboxImageContainer onClose={onClose}>{children}</LightboxImageContainer>
-              </Dialog.Content>
+            </Dialog.Content>
             </LightboxLayout>
-          )}
-        </AnimatePresence>
+        )}
+      </AnimatePresence>
       </Dialog.Portal>
     </Dialog.Root>
   );

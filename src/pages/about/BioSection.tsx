@@ -4,33 +4,38 @@ import { TextLink } from '../../components/ui/TextLink';
 import { GridColumnMain } from '../../components/ui/Grid';
 import { Avatar, AvatarImage } from '../../components/ui/avatar';
 import avatarImage from '../../assets/images/avatar.jpg';
+import { Button } from '@/components/ui/button';
+import { ArrowRightIcon } from 'lucide-react';
+import { SocialLinks } from '../../components/ui/SocialLinks';
 
 export function BioSection() {
   return (
     <Section>
       <Header />
       <Bio />
+      <ContactButton />
     </Section>
   );
 }
 
 function Header() {
   return (
-    <div className="flex items-center gap-4 pb-6">
-      <Avatar className="h-11 w-11">
+    <div className="flex gap-8 items-center">
+      <Avatar className="w-11 h-11">
         <AvatarImage src={avatarImage} alt="Nick Inzucchi" />
       </Avatar>
-      <GridColumnMain>
+      <GridColumnMain className="flex-1">
         <Text.B1>Nick Inzucchi</Text.B1>
         <Text.B4 className="text-fg-secondary">Designer, engineer, product generalist</Text.B4>
       </GridColumnMain>
+      <SocialLinks />
     </div>
   );
 }
 
 function Bio() {
   return (
-    <>
+    <div className="flex flex-col gap-4 pt-4 pb-4">
       <Text.B3>
         I'm a product design lead and design engineer at{' '}
         <TextLink newTab href="https://substack.com" className="underline">
@@ -54,6 +59,16 @@ function Bio() {
         digital products.
       </Text.B3>
       <Text.B3>Based in San Francisco.</Text.B3>
-    </>
+    </div>
+  );
+}
+
+function ContactButton() {
+  return (
+    <a href="mailto:ninzucchi@gmail.com" className="self-start display-contents">
+      <Button>
+        Reach out <ArrowRightIcon size={16} />{' '}
+      </Button>
+    </a>
   );
 }

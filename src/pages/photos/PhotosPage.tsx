@@ -13,8 +13,8 @@ export function PhotosPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const images = photoIds.map((id, i) => ({
-    thumbnail: getCloudinaryUrl(id, { width: 600 }),
-    full: getCloudinaryUrl(id, { width: 1920, quality: 80 }),
+    thumbnail: getCloudinaryUrl(id, { width: 1200, aspectRatio: '3:2', quality: 'auto' }),
+    full: getCloudinaryUrl(id, { width: 2400, quality: 'auto' }),
     alt: `Photo ${i + 1}`,
   }));
 

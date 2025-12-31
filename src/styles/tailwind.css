@@ -24,4 +24,40 @@
   --radius-md: 6px;
   --radius-sm: 4px;
   --radius-xs: 2px;
+
+  /* Background images */
+  --background-image-nav-gradient: linear-gradient(
+    to bottom,
+    color-mix(in oklch, var(--color-bg-primary) 50%, transparent),
+    transparent
+  );
+
+  /* Glass effect */
+  --color-glass-bg: oklch(20% 0 0 / 0.7);
+  --shadow-glass: 0 2px 24px rgba(0, 0, 0, 0.12), 0 0 3px rgba(0, 0, 0, 0.05);
+  --background-image-glass-border: linear-gradient(
+    315deg,
+    oklch(100% 0 0 / 0.2),
+    oklch(100% 0 0 / 0.125) 30%,
+    oklch(100% 0 0 / 0.125) 70%,
+    oklch(100% 0 0 / 0.2)
+  );
+}
+
+.glass-border {
+  position: relative;
+}
+
+.glass-border::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  padding: 1px;
+  background: var(--background-image-glass-border);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }

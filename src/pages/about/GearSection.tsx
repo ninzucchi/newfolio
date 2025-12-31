@@ -1,7 +1,7 @@
 import { Text } from '../../components/ui/Text';
 import { Fragment } from 'react';
 import { Section } from '../../components/ui/Section';
-import { SectionHeader } from '../../components/text/SectionHeader';
+import { SectionHeader } from '../../components/ui/SectionHeader';
 import { TextLink } from '../../components/ui/TextLink';
 import { GearGridContainer, GridColumnMain, GridColumnCategory } from '../../components/ui/Grid';
 import { gear } from '../../lib/data';

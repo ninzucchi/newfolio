@@ -5,7 +5,7 @@ export function ExperienceGridContainer({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn('grid grid-cols-[auto_1fr_auto] gap-x-4 gap-y-6', className)} {...props} />
+    <div className={cn('grid gap-x-4 gap-y-6 grid-cols-[auto_1fr_auto]', className)} {...props} />
   );
 }
 
@@ -13,22 +13,28 @@ export function EducationGridContainer({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('grid grid-cols-[1fr_auto] gap-x-4 gap-y-6', className)} {...props} />;
+  return <div className={cn('grid gap-x-4 gap-y-6 grid-cols-[1fr_auto]', className)} {...props} />;
 }
 
 export function ProjectsGridContainer({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('grid grid-cols-[1fr_auto] gap-x-4 gap-y-6', className)} {...props} />;
+  return <div className={cn('grid gap-x-4 gap-y-6 grid-cols-[1fr_auto]', className)} {...props} />;
 }
 
 export function PhotosGridContainer({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('grid grid-cols-3 gap-2', className)} {...props} />;
+  return (
+    <div
+      className={cn('grid gap-2 w-full', className)}
+      style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(480px, 1fr))' }}
+      {...props}
+    />
+  );
 }
 
 export function GearGridContainer({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('grid grid-cols-[1fr_auto] gap-x-4 gap-y-6', className)} {...props} />;
+  return <div className={cn('grid gap-x-4 gap-y-6 grid-cols-[1fr_auto]', className)} {...props} />;
 }
 
 export function GridColumnIcon({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {

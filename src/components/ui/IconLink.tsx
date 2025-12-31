@@ -13,7 +13,10 @@ export function IconLink({
 }) {
   return (
     <a
-      className={cn('text-fg-primary', className)}
+      className={cn(
+        'transition-colors duration-200 text-fg-secondary hover:text-fg-primary',
+        className
+      )}
       target={newTab ? '_blank' : target}
       rel={newTab ? 'noopener noreferrer' : rel}
       {...props}
