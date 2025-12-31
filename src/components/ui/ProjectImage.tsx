@@ -16,10 +16,11 @@ export function ProjectImage({
 
   return (
     <>
-      <button type="button" onClick={() => setIsOpen(true)} className="w-full cursor-pointer">
+      <button type="button" onClick={() => setIsOpen(true)} className="w-full cursor-zoom-in">
         <img
           src={src}
           alt={alt}
+          draggable={false}
           className={cn(
             'outline-border h-auto w-full rounded-lg object-cover outline outline-offset-0 select-none',
             className

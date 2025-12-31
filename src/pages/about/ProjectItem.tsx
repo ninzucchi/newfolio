@@ -1,6 +1,7 @@
 import { Text } from '../../components/ui/Text';
 import { GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
 import { ProjectImage } from '../../components/ui/ProjectImage';
+import { ImageCarousel } from '../../components/ui/ImageCarousel';
 
 export function ProjectItem({
   title,
@@ -13,6 +14,8 @@ export function ProjectItem({
   year: string;
   images: string[];
 }) {
+  const isSingleImage = images.length === 1;
+
   return (
     <>
       <GridColumnMain>
@@ -22,10 +25,12 @@ export function ProjectItem({
       <GridColumnDate>
         <Text.B4 className="text-fg-secondary">{year}</Text.B4>
       </GridColumnDate>
-      <div className="flex flex-col col-span-2 gap-4 -mt-1 mb-6">
-        {images.map((src, index) => (
-          <ProjectImage key={index} src={src} alt={`${title} - Image ${index + 1}`} />
-        ))}
+      <div className="col-span-2 -mt-1 mb-6">
+        {isSingleImage ? (
+          <ProjectImage src={images[0]} alt={`${title} - Image 1`} />
+        ) : (
+          <ImageCarousel images={images} alt={title} />
+        )}
       </div>
     </>
   );
