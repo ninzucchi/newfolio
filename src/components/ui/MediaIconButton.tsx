@@ -18,8 +18,8 @@ export function MediaIconButton({
       onClick={onClick}
       aria-label={ariaLabel}
       className={cn(
-        'flex h-10 w-10 items-center justify-center rounded-full',
-        'bg-black/50 backdrop-blur-sm',
+        'flex justify-center items-center w-10 h-10 rounded-full',
+        'backdrop-blur-sm bg-black/50',
         'text-fg-secondary hover:text-fg-primary',
         'hover:bg-black/70 active:scale-95',
         'transition-all duration-200',

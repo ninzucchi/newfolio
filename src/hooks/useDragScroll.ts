@@ -63,7 +63,9 @@ export function useDragScroll(containerRef: RefObject<HTMLElement | null>) {
     const dx = Math.abs(currentX - state.startX);
     const dy = Math.abs(currentY - state.startY);
     const timeDiff = Date.now() - state.startTime;
-    return dx > DRAG_DISTANCE_THRESHOLD || dy > DRAG_DISTANCE_THRESHOLD || timeDiff > DRAG_TIME_THRESHOLD;
+    return (
+      dx > DRAG_DISTANCE_THRESHOLD || dy > DRAG_DISTANCE_THRESHOLD || timeDiff > DRAG_TIME_THRESHOLD
+    );
   };
 
   const handleUp = (event: PointerEvent) => {
@@ -137,7 +139,12 @@ export function useDragScroll(containerRef: RefObject<HTMLElement | null>) {
   const handleMove = (event: React.PointerEvent<HTMLElement>) => {
     const state = dragState.current;
 
-    if (!state.isDragging || !containerRef.current || event.pointerId !== state.pointerId || !hasHorizontalOverflow()) {
+    if (
+      !state.isDragging ||
+      !containerRef.current ||
+      event.pointerId !== state.pointerId ||
+      !hasHorizontalOverflow()
+    ) {
       return;
     }
 
@@ -166,4 +173,3 @@ export function useDragScroll(containerRef: RefObject<HTMLElement | null>) {
     hasOverflow: hasHorizontalOverflow,
   };
 }
-

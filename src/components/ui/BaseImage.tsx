@@ -15,10 +15,9 @@ export function BaseImage({
       alt={alt}
       draggable={false}
       className={cn(
-        'h-auto w-full rounded-lg object-cover outline outline-border outline-offset-0 select-none',
+        'object-cover w-full h-auto rounded-lg select-none outline-border outline outline-offset-0',
         className
       )}
     />
   );
 }
-

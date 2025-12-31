@@ -55,35 +55,41 @@ export const projects = [
     description:
       'Re-architected the primary creator control surface to streamline publishing, analytics, and subscriber management.',
     year: '2025',
-    images: ['/placeholder-orange.svg'],
-  },
-  {
-    title: 'Substack mobile app',
-    description:
-      "Extended Substack's core publishing workflow to mobile with full-fidelity drafting and editing.",
-    year: '2024',
-    images: ['/placeholder-amber.svg'],
+    images: [
+      '/projects/dashboard-01.jpg',
+      '/projects/dashboard-02.jpg',
+      '/projects/dashboard-03.jpg',
+      '/projects/dashboard-04.jpg',
+      '/projects/dashboard-05.jpg',
+    ],
   },
   {
     title: 'Substack web app',
     description:
       'Translated the Substack mobile app into a best-in-class desktop reading experience.',
     year: '2024',
-    images: ['/placeholder-yellow.svg'],
+    images: ['/projects/web-01.jpg', '/projects/web-02.jpg', '/projects/web-03.jpg'],
+  },
+  {
+    title: 'Substack mobile app',
+    description:
+      "Extended Substack's core publishing workflow to mobile with full-fidelity drafting and editing.",
+    year: '2024',
+    images: [],
   },
   {
     title: 'Substack Notes',
     description:
       'Helped evolve Substack from a single-player publishing tool into a multi-player social platform.',
     year: '2023',
-    images: ['/placeholder-lime.svg'],
+    images: [],
   },
   {
     title: 'Substack Chat',
     description:
       'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
     year: '2022',
-    images: ['/placeholder-green.svg'],
+    images: [],
   },
   // Meta projects
   {
@@ -91,21 +97,21 @@ export const projects = [
     description:
       'Introduced a low-friction signal for dismissing feed content, enabling users to train ranking systems through negative feedback.',
     year: '2020',
-    images: ['/placeholder-emerald.svg'],
+    images: [],
   },
   {
     title: 'Facebook community notes',
     description:
       'Developed a crowdsourced verification system for evaluating claims at scale, reducing reliance on centralized fact-checking organizations.',
     year: '2019',
-    images: ['/placeholder-teal.svg'],
+    images: [],
   },
   {
     title: 'Facebook blood donations',
     description:
       'Created a platform-wide system for requesting and fulfilling blood donations, connecting donors and organizations to address acute shortages.',
     year: '2018',
-    images: ['/placeholder-cyan.svg'],
+    images: [],
   },
   // IDEO projects
   {
@@ -113,35 +119,35 @@ export const projects = [
     description:
       'Designed a pair of swipe-based repayment tools to reduce debt anxiety and make payments easier to manage.',
     year: '2015',
-    images: ['/placeholder-sky.svg'],
+    images: [],
   },
   {
     title: 'Google Kubits',
     description:
       'Developed a physical, game-driven system that taught core programming concepts through modular, code-like play.',
     year: '2014',
-    images: ['/placeholder-blue.svg'],
+    images: [],
   },
   {
     title: 'Bayer Contour One',
     description:
       'Created a connected hardware and app ecosystem that made glucose, insulin, and lifestyle data legible and actionable for patients and clinicians.',
     year: '2014',
-    images: ['/placeholder-indigo.svg'],
+    images: [],
   },
   {
     title: 'NFL TV app experience',
     description:
       'Defined early UI patterns for browsing live games, highlights, and archives on smart TVs.',
     year: '2013',
-    images: ['/placeholder-violet.svg'],
+    images: [],
   },
   {
     title: 'Ford driver experience',
     description:
       'Designed steering-wheel–driven interfaces that centralized navigation, media, and communication into a hands-on, eyes-up driving experience.',
     year: '2012',
-    images: ['/placeholder-purple.svg'],
+    images: [],
   },
 ];
 
