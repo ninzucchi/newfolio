@@ -44,6 +44,13 @@ export const education = [
 export const projects = [
   // Substack projects
   {
+    title: 'Substack app',
+    description:
+      'Contributed to all aspects of the Substack mobile app, including creation, reading, audio/video, and more.',
+    year: '2025',
+    images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
+  },
+  {
     title: 'Substack design system',
     description:
       'Established the foundational UI and component architecture powering all new Substack product development.',
@@ -54,7 +61,7 @@ export const projects = [
     title: 'Substack creator dashboard',
     description:
       'Re-architected the primary creator control surface to streamline publishing, analytics, and subscriber management.',
-    year: '2025',
+    year: '2024',
     images: [
       '/projects/dashboard-01.jpg',
       '/projects/dashboard-02.jpg',
@@ -64,17 +71,10 @@ export const projects = [
     ],
   },
   {
-    title: 'Substack notes',
-    description:
-      'Introduced a new short-form format to help Substack evolve into a fully featured social platform.',
-    year: '2023',
-    images: ['/projects/notes-01.jpg', '/projects/notes-02.jpg', '/projects/notes-03.jpg'],
-  },
-  {
     title: 'Substack web reader',
     description:
       'Translated the Substack mobile app into a best-in-class desktop reading experience.',
-    year: '2024',
+    year: '2023',
     images: [
       '/projects/reader-01.jpg',
       '/projects/reader-02.jpg',
@@ -83,18 +83,17 @@ export const projects = [
     ],
   },
   {
+    title: 'Substack notes',
+    description: 'Introduced a new short-form format to evolve Substack into a social product.',
+    year: '2022',
+    images: ['/projects/notes-01.jpg', '/projects/notes-02.jpg', '/projects/notes-03.jpg'],
+  },
+  {
     title: 'Substack chat',
     description:
       'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
-    year: '2022',
+    year: '2021',
     images: ['/projects/chat-01.jpg', '/projects/chat-02.jpg', '/projects/chat-03.jpg'],
-  },
-  {
-    title: 'Substack mobile app',
-    description:
-      'Repositioned Substack from a desktop-first publishing tool into an app-first product, spanning creation, consumption, social features, and more.',
-    year: '2022',
-    images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
   },
   // Meta projects
   {
