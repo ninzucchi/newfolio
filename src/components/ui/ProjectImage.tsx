@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { cn } from '../../lib/utils';
 import { Lightbox } from './lightbox/Lightbox';
-import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
+import { LightboxImage } from './lightbox/LightboxImage';
+import { BaseImage } from './BaseImage';
 
 export function ProjectImage({
   src,
@@ -17,15 +17,7 @@ export function ProjectImage({
   return (
     <>
       <button type="button" onClick={() => setIsOpen(true)} className="w-full cursor-zoom-in">
-        <img
-          src={src}
-          alt={alt}
-          draggable={false}
-          className={cn(
-            'outline-border h-auto w-full rounded-lg object-cover outline outline-offset-0 select-none',
-            className
-          )}
-        />
+        <BaseImage src={src} alt={alt} className={className} />
       </button>
 
       <Lightbox isOpen={isOpen} onClose={() => setIsOpen(false)}>

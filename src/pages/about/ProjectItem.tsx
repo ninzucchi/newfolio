@@ -1,7 +1,7 @@
 import { Text } from '../../components/ui/Text';
 import { GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
 import { ProjectImage } from '../../components/ui/ProjectImage';
-import { ImageCarousel } from '../../components/ui/ImageCarousel';
+import { ImageCarousel } from '../../components/ui/carousel/ImageCarousel';
 
 export function ProjectItem({
   title,
