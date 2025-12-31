@@ -94,29 +94,34 @@ export const projects = [
     description:
       "Extended Substack's core publishing workflow to mobile with full-fidelity drafting and editing.",
     year: '2024',
-    images: [],
+    images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
   },
   // Meta projects
+  {
+    title: 'Facebook civic integrity',
+    description:
+      'Developed crowdsourced fact checking and moderation systems to mitigate the spread of misinformation and harmful content in the Global South.',
+    year: '2020',
+    images: [
+      '/projects/civic-01.jpg',
+      '/projects/civic-02.jpg',
+      '/projects/civic-03.jpg',
+      '/projects/civic-04.jpg',
+    ],
+  },
   {
     title: 'Facebook lightweight feedback',
     description:
       'Introduced a low-friction signal for dismissing feed content, enabling users to train ranking systems through negative feedback.',
-    year: '2020',
-    images: [],
-  },
-  {
-    title: 'Facebook community notes',
-    description:
-      'Developed a crowdsourced verification system for evaluating claims at scale, reducing reliance on centralized fact-checking organizations.',
     year: '2019',
-    images: [],
+    images: ['/projects/feedback-01.jpg'],
   },
   {
     title: 'Facebook blood donations',
     description:
       'Created a platform-wide system for requesting and fulfilling blood donations, connecting donors and organizations to address acute shortages.',
     year: '2018',
-    images: [],
+    images: ['/projects/blood-01.jpg', '/projects/blood-02.jpg'],
   },
   // IDEO projects
   {
@@ -124,35 +129,35 @@ export const projects = [
     description:
       'Designed a pair of swipe-based repayment tools to reduce debt anxiety and make payments easier to manage.',
     year: '2015',
-    images: [],
+    images: ['/projects/amex-02.jpg', '/projects/amex-01.jpg'],
   },
   {
     title: 'Google Kubits',
     description:
       'Developed a physical, game-driven system that taught core programming concepts through modular, code-like play.',
     year: '2014',
-    images: [],
+    images: ['/projects/google-01.jpg', '/projects/google-02.jpg', '/projects/google-03.jpg'],
   },
   {
     title: 'Bayer Contour One',
     description:
       'Created a connected hardware and app ecosystem that made glucose, insulin, and lifestyle data legible and actionable for patients and clinicians.',
     year: '2014',
-    images: [],
+    images: ['/projects/bayer-01.jpg'],
   },
   {
     title: 'NFL TV app experience',
     description:
       'Defined early UI patterns for browsing live games, highlights, and archives on smart TVs.',
     year: '2013',
-    images: [],
+    images: ['/projects/nfl-02.jpg'],
   },
   {
     title: 'Ford driver experience',
     description:
       'Designed steering-wheel–driven interfaces that centralized navigation, media, and communication into a hands-on, eyes-up driving experience.',
     year: '2012',
-    images: [],
+    images: ['/projects/ford-02.jpg'],
   },
 ];
 
