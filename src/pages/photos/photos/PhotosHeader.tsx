@@ -1,7 +1,7 @@
 import { GridCell } from '@/components/ui/grid/GridCell';
 import { Text } from '@/components/ui/text/Text';
 
-export function PhotosSection({
+export function PhotosHeader({
   images,
 }: {
   images: { thumbnail: string; full: string; alt: string }[];

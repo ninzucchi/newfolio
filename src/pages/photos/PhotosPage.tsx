@@ -1,61 +1,31 @@
 import { Lightbox } from '@/components/ui/lightbox/Lightbox';
 import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
-import { getCloudinaryUrl } from '@/lib/cloudinary';
-import { photoIds } from '@/lib/photo-ids';
-import { PhotoThumbnail } from '@/pages/photos/components/PhotoThumbnail';
+import { Page } from '@/components/ui/Page';
 import { GearSection } from '@/pages/photos/gear/GearSection';
-import { PhotosGrid } from '@/pages/photos/photos/PhotosGrid';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { PhotosSection } from './photos/PhotosSection';
+import { PhotosHeader } from '@/pages/photos/photos/PhotosHeader';
+import { usePhotos } from '@/pages/photos/usePhotos';
+import { PhotosSection } from './PhotosSection';
 
 export function PhotosPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const images = photoIds.map((id, i) => ({
-    thumbnail: getCloudinaryUrl(id, { width: 1200, aspectRatio: '3:2', quality: 'auto' }),
-    full: getCloudinaryUrl(id, { width: 2400, quality: 'auto' }),
-    alt: `Photo ${i + 1}`,
-  }));
-
-  const currentImage = openIndex !== null ? images[openIndex] : null;
-  const currentFullSrc = currentImage?.full ?? null;
-
-  const hasPrev = openIndex !== null && openIndex > 0;
-  const hasNext = openIndex !== null && openIndex < images.length - 1;
-
-  const handlePrev = () => {
-    if (openIndex === null || !hasPrev) return;
-    setOpenIndex(openIndex - 1);
-  };
-
-  const handleNext = () => {
-    if (openIndex === null || !hasNext) return;
-    setOpenIndex(openIndex + 1);
-  };
+  const {
+    images,
+    openIndex,
+    setOpenIndex,
+    currentImage,
+    currentFullSrc,
+    hasPrev,
+    hasNext,
+    handlePrev,
+    handleNext,
+  } = usePhotos();
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="flex w-full flex-col gap-16 pt-20 pb-20"
-    >
-      <div className="mx-auto flex w-full max-w-[600px] flex-col gap-16">
-        <PhotosSection images={images} />
+    <Page>
+      <TopContainer>
+        <PhotosHeader images={images} />
         <GearSection />
-      </div>
-      <PhotosGrid>
-        {images.map((image, index) => (
-          <PhotoThumbnail
-            key={index}
-            src={image.thumbnail}
-            alt={image.alt}
-            onClick={() => setOpenIndex(index)}
-          />
-        ))}
-      </PhotosGrid>
+      </TopContainer>
+      <PhotosSection images={images} setOpenIndex={setOpenIndex} />
 
       <Lightbox
         isOpen={openIndex !== null}
@@ -67,6 +37,10 @@ export function PhotosPage() {
           <LightboxImage src={currentFullSrc} alt={currentImage.alt} />
         )}
       </Lightbox>
-    </motion.div>
+    </Page>
   );
+}
+
+function TopContainer({ children }: { children: React.ReactNode }) {
+  return <div className="mx-auto flex w-full max-w-[600px] flex-col gap-16">{children}</div>;
 }

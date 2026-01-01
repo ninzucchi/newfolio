@@ -1,9 +1,9 @@
-import { useLocation, useNavigate } from '@tanstack/react-router';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/Tabs';
 import { routes } from '@/lib/routes';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useLocation, useNavigate } from '@tanstack/react-router';
 
 const navItems = [
-  { path: routes.about, label: 'About', value: 'about' },
+  { path: routes.index, label: 'About', value: 'index' },
   { path: routes.photos, label: 'Photos', value: 'photos' },
 ];
 
@@ -14,9 +14,9 @@ export function Header() {
 
   // Determine active tab value
   const getActiveValue = () => {
-    if (currentPath === routes.about || currentPath === routes.index) return 'about';
+    if (currentPath === routes.index) return 'index';
     if (currentPath === routes.photos) return 'photos';
-    return 'about';
+    return 'index';
   };
 
   const handleValueChange = (value: string) => {
@@ -27,7 +27,7 @@ export function Header() {
   };
 
   return (
-    <nav className="sticky top-0 bg-nav-gradient z-1">
+    <nav className="bg-nav-gradient sticky top-0 z-1">
       <div className="mx-auto flex max-w-[640px] items-center justify-center p-5">
         <Tabs value={getActiveValue()} onValueChange={handleValueChange}>
           <TabsList>

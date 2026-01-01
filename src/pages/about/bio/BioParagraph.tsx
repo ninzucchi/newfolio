@@ -1,9 +1,9 @@
-import { Text } from '../../../components/ui/text/Text';
-import { TextLink } from '../../../components/ui/text/TextLink';
+import { Text } from '@/components/ui/text/Text';
+import { TextLink } from '@/components/ui/text/TextLink';
 
 export function BioParagraph() {
   return (
-    <div className="flex flex-col gap-4 pt-4 pb-4">
+    <div className="flex flex-col gap-4 py-4">
       <Text.B3>
         I'm a product design lead and design engineer at{' '}
         <TextLink newTab href="https://substack.com" className="underline">

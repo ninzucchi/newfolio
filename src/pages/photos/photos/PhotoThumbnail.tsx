@@ -13,14 +13,14 @@ export function PhotoThumbnail({
 }) {
   return (
     <PhotoContainer>
-      <button type="button" onClick={onClick} className="w-full h-full cursor-pointer">
+      <button type="button" onClick={onClick} className="h-full w-full cursor-pointer">
         <img
           src={src}
           alt={alt}
           loading="lazy"
           draggable={false}
           className={cn(
-            'object-cover w-full h-auto rounded-none select-none cursor-zoom-in',
+            'h-auto w-full cursor-zoom-in rounded-none object-cover select-none',
             className
           )}
         />
@@ -31,10 +31,7 @@ export function PhotoThumbnail({
 
 function PhotoContainer({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      className="overflow-hidden w-full transition-opacity duration-200 bg-secondary aspect-3/2 hover:opacity-90"
-      style={{ outlineColor: 'var(--color-border)' }}
-    >
+    <div className="bg-secondary aspect-3/2 w-full overflow-hidden transition-opacity duration-200 hover:opacity-90">
       {children}
     </div>
   );
