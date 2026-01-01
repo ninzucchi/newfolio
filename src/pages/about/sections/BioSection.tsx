@@ -1,4 +1,3 @@
-import { ArrowRightIcon } from 'lucide-react';
 import { Avatar, AvatarImage } from '@/components/ui/Avatar';
 import { Button } from '@/components/ui/Button';
 import { GridColumnMain } from '@/components/ui/Grid';
@@ -6,7 +5,7 @@ import { Section } from '@/components/ui/Section';
 import { SocialLinks } from '@/components/ui/SocialLinks';
 import { Text } from '@/components/ui/Text';
 import { TextLink } from '@/components/ui/TextLink';
-import avatarImage from '@/public/avatar.jpg';
+import { ArrowRightIcon } from 'lucide-react';
 
 export function BioSection() {
   return (
@@ -22,7 +21,7 @@ function Header() {
   return (
     <div className="flex gap-4 items-center">
       <Avatar className="w-11 h-11">
-        <AvatarImage src={avatarImage} alt="Nick Inzucchi" />
+        <AvatarImage src={'/avatar.jpg'} alt="Nick Inzucchi" />
       </Avatar>
       <GridColumnMain className="flex-1">
         <Text.B1>Nick Inzucchi</Text.B1>
