@@ -1,7 +1,7 @@
-import { BioSection } from '@/pages/about/sections/BioSection';
-import { EducationSection } from '@/pages/about/sections/EducationSection';
-import { ExperienceSection } from '@/pages/about/sections/ExperienceSection';
-import { ProjectsSection } from '@/pages/about/sections/ProjectsSection';
+import { BioSection } from '@/pages/about/bio/BioSection';
+import { EducationSection } from '@/pages/about/education/EducationSection';
+import { ExperienceSection } from '@/pages/about/experience/ExperienceSection';
+import { ProjectsSection } from '@/pages/about/projects/ProjectsSection';
 import { motion } from 'framer-motion';
 
 export function AboutPage() {
@@ -11,7 +11,7 @@ export function AboutPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col gap-16 pt-20 pb-20 w-full"
+      className="flex w-full flex-col gap-16 pt-20 pb-20"
     >
       <BioSection />
       <ExperienceSection />

@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
+import { IconButton } from '@/components/ui/IconButton';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { MediaIconButton } from '@/components/ui/MediaIconButton';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { useEffect } from 'react';
 
 function LightboxLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -52,18 +52,18 @@ export function Lightbox({
   return (
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Dialog.Portal forceMount>
-      <AnimatePresence>
-        {isOpen && (
+        <AnimatePresence>
+          {isOpen && (
             <LightboxLayout>
               <Dialog.Overlay
                 forceMount
                 className="absolute inset-0 bg-black/95"
                 onClick={onClose}
               />
-            <Dialog.Content
-              forceMount
-              onOpenAutoFocus={(e) => e.preventDefault()}
-              onCloseAutoFocus={(e) => e.preventDefault()}
+              <Dialog.Content
+                forceMount
+                onOpenAutoFocus={(e) => e.preventDefault()}
+                onCloseAutoFocus={(e) => e.preventDefault()}
                 className="pointer-events-none absolute inset-0 flex items-center justify-center"
                 style={{ pointerEvents: 'none' }}
               >
@@ -71,15 +71,15 @@ export function Lightbox({
                   <Dialog.Title>Photo</Dialog.Title>
                 </VisuallyHidden.Root>
                 <Dialog.Close className="pointer-events-auto absolute top-4 right-4">
-                    <MediaIconButton icon={X} aria-label="Close lightbox" />
+                  <IconButton icon={X} aria-label="Close lightbox" />
                 </Dialog.Close>
                 {onPrev && <LightboxNavButton direction="prev" onClick={onPrev} />}
                 {onNext && <LightboxNavButton direction="next" onClick={onNext} />}
                 <LightboxImageContainer onClose={onClose}>{children}</LightboxImageContainer>
-            </Dialog.Content>
+              </Dialog.Content>
             </LightboxLayout>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>
       </Dialog.Portal>
     </Dialog.Root>
   );
@@ -102,7 +102,7 @@ function LightboxNavButton({
       }}
       className={`pointer-events-auto absolute top-1/2 -translate-y-1/2 ${isPrev ? 'left-4' : 'right-4'}`}
     >
-      <MediaIconButton
+      <IconButton
         icon={isPrev ? ChevronLeft : ChevronRight}
         aria-label={isPrev ? 'Previous image' : 'Next image'}
       />

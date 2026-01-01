@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
 import { BaseImage } from '@/components/ui/BaseImage';
+import { cn } from '@/lib/utils';
 
-export function CarouselImageButton({
+export function CarouselImage({
   src,
   alt,
   onClick,

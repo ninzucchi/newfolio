@@ -1,14 +1,14 @@
-import { Section } from '@/components/ui/Section';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { ProjectsGridContainer } from '@/components/ui/Grid';
+import { Section } from '@/components/ui/section/Section';
+import { SectionHeader } from '@/components/ui/section/SectionHeader';
 import { projects } from '@/lib/data';
-import { ProjectItem } from '@/pages/about/sections/components/ProjectItem';
+import { ProjectItem } from '@/pages/about/projects/ProjectItem';
+import { ProjectsGrid } from '@/pages/about/projects/ProjectsGrid';
 
 export function ProjectsSection() {
   return (
     <Section>
       <SectionHeader>Projects</SectionHeader>
-      <ProjectsGridContainer>
+      <ProjectsGrid>
         {projects.map((project, index) => (
           <ProjectItem
             key={index}
@@ -18,7 +18,7 @@ export function ProjectsSection() {
             images={project.images}
           />
         ))}
-      </ProjectsGridContainer>
+      </ProjectsGrid>
     </Section>
   );
 }

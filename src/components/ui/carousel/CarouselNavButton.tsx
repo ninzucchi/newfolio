@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { IconButton } from '@/components/ui/IconButton';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { MediaIconButton } from '@/components/ui/MediaIconButton';
 
 export function CarouselNavButton({
   direction,
@@ -28,7 +28,7 @@ export function CarouselNavButton({
               : 'absolute top-1/2 right-0 translate-x-[calc(100%+12px)] -translate-y-1/2'
           }
         >
-          <MediaIconButton
+          <IconButton
             icon={isLeft ? ChevronLeft : ChevronRight}
             aria-label={isLeft ? 'Previous images' : 'Next images'}
             onClick={onClick}

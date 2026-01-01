@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { useDragScroll } from '@/hooks/useDragScroll';
+import { CarouselImage } from '@/components/ui/carousel/CarouselImage';
+import { CarouselNavButton } from '@/components/ui/carousel/CarouselNavButton';
+import { useCarouselScroll } from '@/components/ui/carousel/useCarouselScroll';
 import { Lightbox } from '@/components/ui/lightbox/Lightbox';
 import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
-import { useCarouselScroll } from '@/components/ui/carousel/useCarouselScroll';
-import { CarouselNavButton } from '@/components/ui/carousel/CarouselNavButton';
-import { CarouselImageButton } from '@/components/ui/carousel/CarouselImageButton';
+import { useDragScroll } from '@/hooks/useDragScroll';
+import { cn } from '@/lib/utils';
+import { useState } from 'react';
 
 export function ImageCarousel({
   images,
@@ -47,7 +47,7 @@ export function ImageCarousel({
           visible={canScrollRight}
           onClick={() => scrollToDirection('right')}
         />
-        <div className="overflow-hidden rounded-lg">
+        <div className="overflow-hidden">
           <div
             ref={scrollRef}
             {...dragScroll.props}
@@ -57,7 +57,7 @@ export function ImageCarousel({
             )}
           >
             {images.map((src, index) => (
-              <CarouselImageButton
+              <CarouselImage
                 key={index}
                 src={src}
                 alt={`${alt} - Image ${index + 1}`}

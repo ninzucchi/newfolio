@@ -1,23 +1,20 @@
-import { Text } from '@/components/ui/Text';
-import { Fragment } from 'react';
-import { Section } from '@/components/ui/Section';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { TextLink } from '@/components/ui/TextLink';
-import {
-  EducationGridContainer,
-  GridColumnMain,
-  GridColumnDate,
-} from '@/components/ui/Grid';
+import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
+import { Section } from '@/components/ui/section/Section';
+import { SectionHeader } from '@/components/ui/section/SectionHeader';
+import { Text } from '@/components/ui/text/Text';
+import { TextLink } from '@/components/ui/text/TextLink';
 import { education } from '@/lib/data';
+import { EducationGrid } from '@/pages/about/education/EducationGrid';
+import { Fragment } from 'react';
 
 export function EducationSection() {
   return (
     <Section>
       <SectionHeader>Education</SectionHeader>
-      <EducationGridContainer>
+      <EducationGrid>
         {education.map((item, index) => (
           <Fragment key={index}>
-            <GridColumnMain>
+            <GridCell>
               <TextLink
                 newTab
                 href={item.institutionUrl}
@@ -26,13 +23,13 @@ export function EducationSection() {
                 {item.institution}
               </TextLink>
               <Text.B4 className="text-fg-secondary">{item.degree}</Text.B4>
-            </GridColumnMain>
-            <GridColumnDate>
+            </GridCell>
+            <GridCellRight>
               <Text.B4 className="text-fg-secondary">{item.year}</Text.B4>
-            </GridColumnDate>
+            </GridCellRight>
           </Fragment>
         ))}
-      </EducationGridContainer>
+      </EducationGrid>
     </Section>
   );
 }

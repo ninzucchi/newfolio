@@ -1,5 +1,5 @@
-import type { HTMLAttributes, ElementType } from 'react';
 import { cn } from '@/lib/utils';
+import type { ElementType, HTMLAttributes } from 'react';
 
 type TextVariant =
   | 'h1'

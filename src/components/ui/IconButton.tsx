@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 import type { LucideIcon } from 'lucide-react';
 
-export function MediaIconButton({
+export function IconButton({
   icon: Icon,
   onClick,
   className,
@@ -18,12 +18,16 @@ export function MediaIconButton({
       onClick={onClick}
       aria-label={ariaLabel}
       className={cn(
-        'flex justify-center items-center w-10 h-10 rounded-full',
-        'backdrop-blur-sm bg-black/50',
+        // Layout
+        'flex h-10 w-10 items-center justify-center rounded-full',
+        // Colors
+        'bg-black/50 backdrop-blur-sm',
+        // Typography
         'text-fg-secondary hover:text-fg-primary',
-        'hover:bg-black/70 active:scale-95',
+        // Interactive states
+        'cursor-pointer hover:bg-black/70 active:scale-95',
+        // Animation
         'transition-all duration-200',
-        'cursor-pointer',
         className
       )}
     >
