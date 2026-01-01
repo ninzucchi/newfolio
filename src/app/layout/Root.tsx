@@ -1,5 +1,5 @@
 import { Content } from '@/app/layout/Content';
-import { Header } from '@/components/nav/Header';
+import { Nav } from '@/components/ui/Nav';
 import { Outlet, useLocation } from '@tanstack/react-router';
 import { useEffect } from 'react';
 
@@ -12,7 +12,7 @@ export function Root() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <Nav />
       <Content>
         <Outlet />
       </Content>

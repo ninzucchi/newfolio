@@ -36,7 +36,7 @@ export function ImageCarousel({
 
   return (
     <>
-      <div className={cn('relative', className)}>
+      <div className={cn('relative -mx-5 sm:mx-0', className)}>
         <CarouselNavButton
           direction="left"
           visible={canScrollLeft}
@@ -52,7 +52,7 @@ export function ImageCarousel({
             ref={scrollRef}
             {...dragScroll.props}
             className={cn(
-              'scrollbar-none flex gap-3 overflow-x-auto select-none',
+              'flex gap-3 overflow-x-auto select-none px-5 sm:px-0 no-scrollbar',
               dragScroll.isDragging ? 'cursor-grabbing' : 'cursor-grab'
             )}
           >

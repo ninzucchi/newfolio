@@ -7,7 +7,7 @@ const navItems = [
   { path: routes.photos, label: 'Photos', value: 'photos' },
 ];
 
-export function Header() {
+export function Nav() {
   const location = useLocation();
   const navigate = useNavigate();
   const currentPath = location.pathname;

@@ -18,7 +18,7 @@ export function CarouselImage({
       onClick={onClick}
       className={cn('w-[80%] shrink-0', isDragging ? 'cursor-grabbing' : 'cursor-grab')}
     >
-      <BaseImage src={src} alt={alt} />
+      <BaseImage src={src} alt={alt} className="outline-border-default rounded-lg" />
     </button>
   );
 }

@@ -28,7 +28,7 @@
   /* Background images */
   --background-image-nav-gradient: linear-gradient(
     to bottom,
-    color-mix(in oklch, var(--color-bg-primary) 50%, transparent),
+    color-mix(in oklch, var(--color-primary) 50%, transparent),
     transparent
   );
 
@@ -60,4 +60,17 @@
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   mask-composite: exclude;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@utility outline-border-default {
+  @apply outline-border outline-1 -outline-offset-1;
 }

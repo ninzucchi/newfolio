@@ -24,8 +24,8 @@ export function CarouselNavButton({
           transition={{ duration: 0.15 }}
           className={
             isLeft
-              ? 'absolute top-1/2 left-0 -translate-x-[calc(100%+12px)] -translate-y-1/2'
-              : 'absolute top-1/2 right-0 translate-x-[calc(100%+12px)] -translate-y-1/2'
+              ? 'hidden sm:block absolute top-1/2 left-0 -translate-x-[calc(100%+12px)] -translate-y-1/2'
+              : 'hidden sm:block absolute top-1/2 right-0 translate-x-[calc(100%+12px)] -translate-y-1/2'
           }
         >
           <IconButton
