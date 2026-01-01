@@ -17,13 +17,16 @@
 
   /* UI element colors */
   --color-border: oklch(100% 0 0 / 0.125);
-  --color-ring: oklch(0.698 0.201 42.2);
+  --color-ring: oklch(0.579 0.191 252);
 
   /* Border radius */
   --radius-lg: 8px;
   --radius-md: 6px;
   --radius-sm: 4px;
   --radius-xs: 2px;
+
+  /* Easing functions */
+  --easing-default: cubic-bezier(0.19, 1, 0.22, 1);
 
   /* Background images */
   --background-image-nav-gradient: linear-gradient(
@@ -67,10 +70,35 @@
   -ms-overflow-style: none;
 }
 
+@utility ring-shadow {
+  box-shadow:
+    0 0 0 2px var(--color-background),
+    0 0 0 3px var(--color-ring),
+    0 0 0 5px color-mix(in oklch, var(--color-ring) 20%, transparent);
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 @utility outline-border-default {
   @apply outline-border outline-1 -outline-offset-1;
+}
+
+@utility transition-default {
+  transition-timing-function: var(--easing-default);
+}
+
+@layer base {
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    @apply transition-all;
+  }
+
+  *:focus-visible {
+    @apply ring-shadow! rounded-xs outline-none!;
+  }
 }

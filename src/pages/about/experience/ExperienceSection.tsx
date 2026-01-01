@@ -1,7 +1,6 @@
 import { GridCell, GridCellFit, GridCellRight } from '@/components/ui/grid/GridCell';
 import { IconContainer } from '@/components/ui/IconContainer';
-import { Section } from '@/components/ui/section/Section';
-import { SectionHeader } from '@/components/ui/section/SectionHeader';
+import { SectionCollapsible } from '@/components/ui/section/Section';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { experience } from '@/lib/data';
@@ -10,8 +9,7 @@ import { Fragment } from 'react';
 
 export function ExperienceSection() {
   return (
-    <Section>
-      <SectionHeader>Experience</SectionHeader>
+    <SectionCollapsible title="Experience">
       <ExperienceGrid>
         {experience.map((item, index) => {
           const IconComponent = item.icon;
@@ -35,6 +33,6 @@ export function ExperienceSection() {
           );
         })}
       </ExperienceGrid>
-    </Section>
+    </SectionCollapsible>
   );
 }

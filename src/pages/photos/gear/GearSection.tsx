@@ -1,6 +1,5 @@
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
-import { Section } from '@/components/ui/section/Section';
-import { SectionHeader } from '@/components/ui/section/SectionHeader';
+import { SectionCollapsible } from '@/components/ui/section/Section';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { gear } from '@/lib/data';
@@ -9,8 +8,7 @@ import { Fragment } from 'react';
 
 export function GearSection() {
   return (
-    <Section>
-      <SectionHeader>Gear</SectionHeader>
+    <SectionCollapsible title="Gear">
       <GearGrid>
         {gear.map((item, index) => (
           <Fragment key={index}>
@@ -25,6 +23,6 @@ export function GearSection() {
           </Fragment>
         ))}
       </GearGrid>
-    </Section>
+    </SectionCollapsible>
   );
 }

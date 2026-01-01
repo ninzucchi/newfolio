@@ -47,12 +47,12 @@ export function ImageCarousel({
           visible={canScrollRight}
           onClick={() => scrollToDirection('right')}
         />
-        <div className="overflow-hidden">
+        <div className="-my-4 overflow-hidden py-4">
           <div
             ref={scrollRef}
             {...dragScroll.props}
             className={cn(
-              'flex gap-3 overflow-x-auto select-none px-5 sm:px-0 no-scrollbar',
+              'no-scrollbar -my-4 flex gap-3 overflow-x-auto px-5 py-4 select-none sm:px-0',
               dragScroll.isDragging ? 'cursor-grabbing' : 'cursor-grab'
             )}
           >

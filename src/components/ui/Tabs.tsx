@@ -1,5 +1,5 @@
-import * as React from 'react';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
+import * as React from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -19,11 +19,11 @@ function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimi
       data-slot="tabs-list"
       className={cn(
         // Layout
-        'inline-flex justify-center items-center shrink-0',
+        'inline-flex shrink-0 items-center justify-center',
         // Size
-        'gap-2 px-1 py-1 h-10',
+        'h-10 gap-2 px-1 py-1',
         // Colors
-        'blur-none backdrop-blur-md bg-glass-bg',
+        'bg-glass-bg blur-none backdrop-blur-md',
         // Shadow
         'shadow-glass',
         // Border
@@ -52,8 +52,6 @@ function TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPr
         'text-fg-secondary hover:text-fg-primary data-[state=active]:text-fg-primary data-[state=active]:bg-white/10 data-[state=active]:shadow-[inset_0_0_2px_rgba(255,255,255,0.04)]',
         // Border
         'rounded-full',
-        // Focus states
-        'focus-visible:ring-ring outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         // Interactive states
         'cursor-pointer transition-all duration-250 ease-in-out select-none disabled:pointer-events-none disabled:opacity-50',
         // SVG children
@@ -75,4 +73,4 @@ function TabsContent({ className, ...props }: React.ComponentProps<typeof TabsPr
   );
 }
 
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs, TabsContent, TabsList, TabsTrigger };

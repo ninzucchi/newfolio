@@ -1,6 +1,5 @@
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
-import { Section } from '@/components/ui/section/Section';
-import { SectionHeader } from '@/components/ui/section/SectionHeader';
+import { SectionCollapsible } from '@/components/ui/section/Section';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { education } from '@/lib/data';
@@ -9,8 +8,7 @@ import { Fragment } from 'react';
 
 export function EducationSection() {
   return (
-    <Section>
-      <SectionHeader>Education</SectionHeader>
+    <SectionCollapsible title="Education">
       <EducationGrid>
         {education.map((item, index) => (
           <Fragment key={index}>
@@ -30,6 +28,6 @@ export function EducationSection() {
           </Fragment>
         ))}
       </EducationGrid>
-    </Section>
+    </SectionCollapsible>
   );
 }

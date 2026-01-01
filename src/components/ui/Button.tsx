@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Slot } from '@radix-ui/react-slot';
 import { cn } from '@/lib/utils';
+import { Slot } from '@radix-ui/react-slot';
+import * as React from 'react';
 
 function Button({
   className,
@@ -27,8 +27,6 @@ function Button({
         'shadow-glass',
         // Border
         'glass-border rounded-full',
-        // Focus states
-        'focus-visible:ring-ring outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         // Interactive states
         'cursor-pointer transition-all duration-250 ease-in-out active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50',
         // SVG children

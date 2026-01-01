@@ -21,18 +21,18 @@ interface TextProps extends HTMLAttributes<HTMLElement> {
 }
 
 const variantStyles: Record<TextVariant, string> = {
-  h1: 'text-4xl font-semibold leading-tight text-foreground',
-  h2: 'text-3xl font-semibold leading-tight text-foreground',
-  h3: 'text-2xl font-semibold leading-tight text-foreground',
-  h4: 'text-xl font-semibold leading-tight text-foreground',
-  h5: 'text-lg font-semibold leading-tight text-foreground',
-  h6: 'text-base font-semibold leading-tight text-foreground',
-  p: 'text-base leading-normal text-foreground',
-  span: 'text-base leading-normal text-foreground',
-  b1: 'text-xl leading-normal text-foreground',
-  b2: 'text-lg leading-normal text-foreground',
-  b3: 'text-base leading-normal text-foreground',
-  b4: 'text-sm leading-normal text-foreground',
+  h1: 'text-4xl font-semibold leading-tight',
+  h2: 'text-3xl font-semibold leading-tight',
+  h3: 'text-2xl font-semibold leading-tight',
+  h4: 'text-xl font-semibold leading-tight',
+  h5: 'text-lg font-semibold leading-tight',
+  h6: 'text-base font-semibold leading-tight',
+  p: 'text-base leading-normal',
+  span: 'text-base leading-normal',
+  b1: 'text-xl leading-normal',
+  b2: 'text-lg leading-normal',
+  b3: 'text-base leading-normal',
+  b4: 'text-sm leading-normal',
 };
 
 export function Text({ as, variant, className = '', children, ...props }: TextProps) {
