@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { cn } from '../../../lib/utils';
-import { useDragScroll } from '../../../hooks/useDragScroll';
-import { Lightbox } from '../lightbox/Lightbox';
-import { LightboxImage } from '../lightbox/LightboxImage';
-import { useCarouselScroll } from './useCarouselScroll';
-import { CarouselNavButton } from './CarouselNavButton';
-import { CarouselImageButton } from './CarouselImageButton';
+import { cn } from '@/lib/utils';
+import { useDragScroll } from '@/hooks/useDragScroll';
+import { Lightbox } from '@/components/ui/lightbox/Lightbox';
+import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
+import { useCarouselScroll } from '@/components/ui/carousel/useCarouselScroll';
+import { CarouselNavButton } from '@/components/ui/carousel/CarouselNavButton';
+import { CarouselImageButton } from '@/components/ui/carousel/CarouselImageButton';
 
 export function ImageCarousel({
   images,

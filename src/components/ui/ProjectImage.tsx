@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Lightbox } from './lightbox/Lightbox';
-import { LightboxImage } from './lightbox/LightboxImage';
-import { BaseImage } from './BaseImage';
+import { Lightbox } from '@/components/ui/lightbox/Lightbox';
+import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
+import { BaseImage } from '@/components/ui/BaseImage';
 
 export function ProjectImage({
   src,

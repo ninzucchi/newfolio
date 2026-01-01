@@ -1,6 +1,6 @@
-import { SubstackIcon } from '../components/icons/SubstackIcon';
-import { MetaIcon } from '../components/icons/MetaIcon';
-import { IDEOIcon } from '../components/icons/IDEOIcon';
+import { SubstackIcon } from '@/components/icons/SubstackIcon';
+import { MetaIcon } from '@/components/icons/MetaIcon';
+import { IDEOIcon } from '@/components/icons/IDEOIcon';
 
 export const experience = [
   {

@@ -1,8 +1,8 @@
-import { Section } from '../../components/ui/Section';
-import { SectionHeader } from '../../components/ui/SectionHeader';
-import { ProjectsGridContainer } from '../../components/ui/Grid';
-import { projects } from '../../lib/data';
-import { ProjectItem } from './ProjectItem';
+import { Section } from '@/components/ui/Section';
+import { SectionHeader } from '@/components/ui/SectionHeader';
+import { ProjectsGridContainer } from '@/components/ui/Grid';
+import { projects } from '@/lib/data';
+import { ProjectItem } from '@/pages/about/sections/components/ProjectItem';
 
 export function ProjectsSection() {
   return (

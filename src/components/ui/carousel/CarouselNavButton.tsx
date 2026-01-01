@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { MediaIconButton } from '../MediaIconButton';
+import { MediaIconButton } from '@/components/ui/MediaIconButton';
 
 export function CarouselNavButton({
   direction,

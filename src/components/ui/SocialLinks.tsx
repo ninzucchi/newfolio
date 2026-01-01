@@ -1,6 +1,6 @@
-import { IconLink } from './IconLink';
-import { LinkedInIcon } from '../icons/LinkedInIcon';
-import { GitHubIcon } from '../icons/GitHubIcon';
+import { IconLink } from '@/components/ui/IconLink';
+import { GitHubIcon } from '@/components/icons/GitHubIcon';
+import { LinkedInIcon } from '@/components/icons/LinkedInIcon';
 
 export function SocialLinks() {
   return (

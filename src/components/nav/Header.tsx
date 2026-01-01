@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from '@tanstack/react-router';
-import { routes } from '../../lib/routes';
-import { Tabs, TabsList, TabsTrigger } from '../ui/tabs';
+import { routes } from '@/lib/routes';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const navItems = [
   { path: routes.about, label: 'About', value: 'about' },

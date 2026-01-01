@@ -3,7 +3,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { MediaIconButton } from '../MediaIconButton';
+import { MediaIconButton } from '@/components/ui/MediaIconButton';
 
 function LightboxLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,16 +1,16 @@
-import { Text } from '../../components/ui/Text';
+import { Text } from '@/components/ui/Text';
 import { Fragment } from 'react';
-import { Section } from '../../components/ui/Section';
-import { SectionHeader } from '../../components/ui/SectionHeader';
-import { TextLink } from '../../components/ui/TextLink';
+import { Section } from '@/components/ui/Section';
+import { SectionHeader } from '@/components/ui/SectionHeader';
+import { TextLink } from '@/components/ui/TextLink';
 import {
   ExperienceGridContainer,
   GridColumnIcon,
   GridColumnMain,
   GridColumnDate,
-} from '../../components/ui/Grid';
-import { IconContainer } from '../../components/ui/IconContainer';
-import { experience } from '../../lib/data';
+} from '@/components/ui/Grid';
+import { IconContainer } from '@/components/ui/IconContainer';
+import { experience } from '@/lib/data';
 
 export function ExperienceSection() {
   return (

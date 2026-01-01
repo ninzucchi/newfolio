@@ -1,8 +1,8 @@
-import { Text } from '../../components/ui/Text';
-import { GridColumnMain, GridColumnDate } from '../../components/ui/Grid';
-import { ProjectImage } from '../../components/ui/ProjectImage';
-import { ImageCarousel } from '../../components/ui/carousel/ImageCarousel';
+import { GridColumnDate, GridColumnMain } from '@/components/ui/Grid';
+import { ProjectImage } from '@/components/ui/ProjectImage';
 import { ProjectImagePlaceholder } from '@/components/ui/ProjectImagePlaceholder';
+import { Text } from '@/components/ui/Text';
+import { ImageCarousel } from '@/components/ui/carousel/ImageCarousel';
 
 export function ProjectItem({
   title,

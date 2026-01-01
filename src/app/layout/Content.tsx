@@ -1,6 +1,6 @@
 import { useLocation } from '@tanstack/react-router';
 import type { ReactNode } from 'react';
-import { routes } from '../../lib/routes';
+import { routes } from '@/lib/routes';
 
 interface ContentProps {
   children: ReactNode;

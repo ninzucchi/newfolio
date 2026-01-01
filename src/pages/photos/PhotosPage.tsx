@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { GridColumnMain, PhotosGridContainer } from '../../components/ui/Grid';
-import { Lightbox } from '../../components/ui/lightbox/Lightbox';
+import { GridColumnMain, PhotosGridContainer } from '@/components/ui/Grid';
+import { Lightbox } from '@/components/ui/lightbox/Lightbox';
 import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
 import { PhotoThumbnail } from '@/pages/photos/PhotoThumbnail';
 import { Text } from '@/components/ui/Text';
-import { GearSection } from '@/pages/about/GearSection';
+import { GearSection } from '@/pages/about/sections/GearSection';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import { photoIds } from '@/lib/photo-ids';
 
@@ -40,10 +40,10 @@ export function PhotosPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="flex flex-col gap-16 pt-20 pb-20 w-full"
+      className="flex w-full flex-col gap-16 pt-20 pb-20"
     >
       <div className="mx-auto flex w-full max-w-[600px] flex-col gap-16">
-        <div className="flex gap-4 justify-center">
+        <div className="flex justify-center gap-4">
           <GridColumnMain className="items-center">
             <Text.B1>Photos</Text.B1>
             <Text.B4 className="text-fg-secondary">

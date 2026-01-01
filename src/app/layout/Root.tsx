@@ -1,8 +1,8 @@
 import { Outlet, useLocation } from '@tanstack/react-router';
 import { useEffect } from 'react';
-import { Header } from '../../components/nav/Header';
-import { Page } from './Page';
-import { Content } from './Content';
+import { Header } from '@/components/nav/Header';
+import { Page } from '@/app/layout/Page';
+import { Content } from '@/app/layout/Content';
 
 export function Root() {
   const location = useLocation();

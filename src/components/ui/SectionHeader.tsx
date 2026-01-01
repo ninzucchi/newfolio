@@ -1,6 +1,6 @@
-import { Text } from './Text';
-import { Divider } from './Divider';
-import { cn } from '../../lib/utils';
+import { Text } from '@/components/ui/Text';
+import { Divider } from '@/components/ui/Divider';
+import { cn } from '@/lib/utils';
 
 export function SectionHeader({
   children,

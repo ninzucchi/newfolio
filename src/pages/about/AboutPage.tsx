@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { BioSection } from './BioSection';
-import { ExperienceSection } from './ExperienceSection';
-import { EducationSection } from './EducationSection';
-import { ProjectsSection } from './ProjectsSection';
+import { BioSection } from '@/pages/about/sections/BioSection';
+import { ExperienceSection } from '@/pages/about/sections/ExperienceSection';
+import { EducationSection } from '@/pages/about/sections/EducationSection';
+import { ProjectsSection } from '@/pages/about/sections/ProjectsSection';
 
 export function AboutPage() {
   return (

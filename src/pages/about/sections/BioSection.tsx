@@ -1,12 +1,12 @@
-import { Text } from '../../components/ui/Text';
-import { Section } from '../../components/ui/Section';
-import { TextLink } from '../../components/ui/TextLink';
-import { GridColumnMain } from '../../components/ui/Grid';
-import { Avatar, AvatarImage } from '../../components/ui/avatar';
-import avatarImage from '../../../public/avatar.jpg';
-import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
-import { SocialLinks } from '../../components/ui/SocialLinks';
+import { Avatar, AvatarImage } from '@/components/ui/Avatar';
+import { Button } from '@/components/ui/Button';
+import { GridColumnMain } from '@/components/ui/Grid';
+import { Section } from '@/components/ui/Section';
+import { SocialLinks } from '@/components/ui/SocialLinks';
+import { Text } from '@/components/ui/Text';
+import { TextLink } from '@/components/ui/TextLink';
+import avatarImage from '@/public/avatar.jpg';
 
 export function BioSection() {
   return (
