@@ -1,5 +1,5 @@
 import { Collapsible, CollapsibleContent } from '@/components/ui/Collapsible';
-import { defaultEasing } from '@/lib/easing';
+import { defaultDuration, defaultEasing } from '@/lib/animation';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
@@ -43,7 +43,7 @@ export function SectionCollapsible({
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.2, ease: defaultEasing }}
+                transition={{ duration: defaultDuration, ease: defaultEasing }}
                 className="-mx-4 overflow-hidden px-4"
               >
                 <div className="h-6" />

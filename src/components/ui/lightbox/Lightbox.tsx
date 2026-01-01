@@ -1,4 +1,5 @@
 import { IconButton } from '@/components/ui/IconButton';
+import { defaultEasing, longDuration } from '@/lib/animation';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -12,7 +13,7 @@ function LightboxLayout({ children }: { children: React.ReactNode }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.2, ease: 'easeOut' }}
+      transition={{ duration: longDuration, ease: defaultEasing }}
     >
       {children}
     </motion.div>
