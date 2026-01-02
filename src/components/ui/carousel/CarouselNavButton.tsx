@@ -30,10 +30,11 @@ export function CarouselNavButton({
           }
         >
           <IconButton
-            icon={isLeft ? ChevronLeft : ChevronRight}
             aria-label={isLeft ? 'Previous images' : 'Next images'}
             onClick={onClick}
-          />
+          >
+            {isLeft ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+          </IconButton>
         </motion.div>
       )}
     </AnimatePresence>

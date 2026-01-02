@@ -1,5 +1,6 @@
 import { ImageCarousel } from '@/components/ui/carousel/ImageCarousel';
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
+import { IconButton } from '@/components/ui/IconButton';
 import { Text } from '@/components/ui/text/Text';
 import { ProjectImage } from '@/pages/about/projects/ProjectImage';
 import { Check, Link2 } from 'lucide-react';
@@ -35,16 +36,16 @@ export function ProjectItem({
       <GridCell>
         <div className="flex items-center gap-2">
           <Text.B3>{title}</Text.B3>
-          <button
-            type="button"
+          <IconButton
             onClick={handleCopyLink}
             aria-label="Copy link to project"
-            className={`text-fg-secondary hover:text-fg-primary cursor-pointer transition-all ${
+            size="sm"
+            className={`transition-all ${
               copied ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
             }`}
           >
             {copied ? <Check size={14} /> : <Link2 size={14} />}
-          </button>
+          </IconButton>
         </div>
         <Text.B4 className="text-fg-secondary">{description}</Text.B4>
       </GridCell>

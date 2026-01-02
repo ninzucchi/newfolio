@@ -1,17 +1,19 @@
 import { cn } from '@/lib/utils';
-import type { LucideIcon } from 'lucide-react';
 
 export function IconButton({
-  icon: Icon,
+  children,
   onClick,
   className,
   'aria-label': ariaLabel,
+  size = 'md',
+  ...props
 }: {
-  icon: LucideIcon;
+  children: React.ReactNode;
   onClick?: () => void;
   className?: string;
   'aria-label': string;
-}) {
+  size?: 'md' | 'sm';
+} & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <button
       type="button"
@@ -19,19 +21,19 @@ export function IconButton({
       aria-label={ariaLabel}
       className={cn(
         // Layout
-        'flex h-10 w-10 items-center justify-center rounded-full',
+        'flex items-center justify-center rounded-full',
+        size === 'md' ? 'h-10 w-10' : 'h-6 w-6',
         // Colors
-        'bg-black/50 backdrop-blur-sm',
+        'bg-primary/50 backdrop-blur-sm',
         // Typography
         'text-fg-secondary hover:text-fg-primary',
         // Interactive states
-        'cursor-pointer hover:bg-black/70 active:scale-95',
-        // Animation
-        'transition-all duration-200',
+        'cursor-pointer transition-all duration-200 hover:bg-black/70 active:scale-95',
         className
       )}
+      {...props}
     >
-      <Icon size={20} />
+      {children}
     </button>
   );
 }

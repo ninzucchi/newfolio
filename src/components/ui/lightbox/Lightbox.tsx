@@ -72,7 +72,9 @@ export function Lightbox({
                   <Dialog.Title>Photo</Dialog.Title>
                 </VisuallyHidden.Root>
                 <Dialog.Close className="pointer-events-auto absolute top-4 right-4">
-                  <IconButton icon={X} aria-label="Close lightbox" />
+                  <IconButton aria-label="Close lightbox">
+                    <X size={20} />
+                  </IconButton>
                 </Dialog.Close>
                 {onPrev && <LightboxNavButton direction="prev" onClick={onPrev} />}
                 {onNext && <LightboxNavButton direction="next" onClick={onNext} />}
@@ -103,10 +105,9 @@ function LightboxNavButton({
       }}
       className={`pointer-events-auto absolute top-1/2 z-1 -translate-y-1/2 ${isPrev ? 'left-4' : 'right-4'}`}
     >
-      <IconButton
-        icon={isPrev ? ChevronLeft : ChevronRight}
-        aria-label={isPrev ? 'Previous image' : 'Next image'}
-      />
+      <IconButton aria-label={isPrev ? 'Previous image' : 'Next image'}>
+        {isPrev ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+      </IconButton>
     </button>
   );
 }

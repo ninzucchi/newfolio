@@ -1,9 +1,9 @@
 import { CollapsibleTrigger } from '@/components/ui/Collapsible';
 import { Divider } from '@/components/ui/Divider';
+import { IconButton } from '@/components/ui/IconButton';
 import { Text } from '@/components/ui/text/Text';
 import { cn } from '@/lib/utils';
 import { ChevronsDownUpIcon, ChevronsUpDownIcon } from 'lucide-react';
-import { forwardRef } from 'react';
 
 export function SectionHeader({
   children,
@@ -34,7 +34,9 @@ export function SectionHeaderCollapsible({
       <HeaderTitle>{children}</HeaderTitle>
       <Divider />
       <CollapsibleTrigger asChild>
-        <HeaderCollapseTrigger isOpen={isOpen} />
+        <IconButton aria-label={isOpen ? 'Collapse section' : 'Expand section'} size="sm">
+          {isOpen ? <ChevronsDownUpIcon size={14} /> : <ChevronsUpDownIcon size={14} />}
+        </IconButton>
       </CollapsibleTrigger>
     </HeaderContainer>
   );
@@ -57,24 +59,3 @@ function HeaderTitle({ children }: { children: React.ReactNode }) {
     </Text.H2>
   );
 }
-
-const HeaderCollapseTrigger = forwardRef<
-  HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement> & { isOpen: boolean }
->(({ isOpen, className, ...props }, ref) => {
-  return (
-    <button
-      type="button"
-      ref={ref}
-      className={cn(
-        'text-fg-secondary hover:text-fg-primary flex shrink-0 cursor-pointer items-center transition-colors',
-        className
-      )}
-      {...props}
-    >
-      {isOpen ? <ChevronsDownUpIcon size={14} /> : <ChevronsUpDownIcon size={14} />}
-    </button>
-  );
-});
-
-HeaderCollapseTrigger.displayName = 'HeaderCollapseTrigger';
