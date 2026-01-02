@@ -201,3 +201,21 @@ export const gear = [
     category: 'Lens',
   },
 ];
+
+export const skills = {
+  Design: [
+    'User Interface Design',
+    'User Experience Design',
+    'Design Systems',
+    'Prototyping',
+    'Visual Design',
+  ],
+  Development: ['React', 'TypeScript', 'JavaScript', 'CSS/HTML', 'Component Architecture'],
+  Product: [
+    'Product Strategy',
+    'User Research',
+    'Product Management',
+    'A/B Testing',
+    'Data Analysis',
+  ],
+};
