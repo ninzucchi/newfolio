@@ -20,8 +20,8 @@ export function usePhotos() {
   );
 
   const images = photoIds.map((id, i) => ({
-    thumbnail: getCloudinaryUrl(id, { width: 1200, aspectRatio: '3:2', quality: 'auto' }),
-    full: getCloudinaryUrl(id, { width: 2400, quality: 'auto' }),
+    thumbnail: getCloudinaryUrl(id, { width: 1200, aspectRatio: '3:2', crop: 'fill' }),
+    full: getCloudinaryUrl(id, { width: 2000 }),
     alt: `Photo ${i + 1}`,
   }));
 
