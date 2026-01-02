@@ -23,7 +23,7 @@ export function ProjectItem({
   const url = `${window.location.origin}/#${slug}`;
 
   return (
-    <div id={slug} className="group col-span-2 grid grid-cols-subgrid gap-y-6">
+    <div id={slug} className="group col-span-2 grid scroll-mt-20 grid-cols-subgrid gap-y-6">
       <GridCell>
         <div className="flex items-center gap-2">
           <Text.B3>{title}</Text.B3>
