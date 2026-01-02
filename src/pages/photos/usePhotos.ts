@@ -1,9 +1,23 @@
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import { photoIds } from '@/lib/photo-ids';
-import { useState } from 'react';
+import { useNavigate, useSearch } from '@tanstack/react-router';
+import { useCallback } from 'react';
 
 export function usePhotos() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { p } = useSearch({ from: '/photos' });
+  const navigate = useNavigate({ from: '/photos' });
+
+  const openIndex = p !== undefined && p >= 0 && p < photoIds.length ? p : null;
+
+  const setOpenIndex = useCallback(
+    (index: number | null) => {
+      navigate({
+        search: index === null ? {} : { p: index },
+        replace: true,
+      });
+    },
+    [navigate]
+  );
 
   const images = photoIds.map((id, i) => ({
     thumbnail: getCloudinaryUrl(id, { width: 1200, aspectRatio: '3:2', quality: 'auto' }),

@@ -13,10 +13,15 @@ const indexRoute = createRoute({
   component: AboutPage,
 });
 
+type PhotosSearch = { p?: number };
+
 const photosRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/photos',
   component: PhotosPage,
+  validateSearch: (search: Record<string, unknown>): PhotosSearch => ({
+    p: typeof search.p === 'number' ? search.p : undefined,
+  }),
 });
 
 const routeTree = rootRoute.addChildren([indexRoute, photosRoute]);
