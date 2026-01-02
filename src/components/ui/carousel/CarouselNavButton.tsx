@@ -1,7 +1,7 @@
 import { IconButton } from '@/components/ui/IconButton';
 import { defaultDuration, defaultEasing } from '@/lib/animation';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 export function CarouselNavButton({
   direction,
@@ -29,11 +29,8 @@ export function CarouselNavButton({
               : 'absolute top-1/2 right-0 hidden translate-x-[calc(100%+12px)] -translate-y-1/2 sm:block'
           }
         >
-          <IconButton
-            aria-label={isLeft ? 'Previous images' : 'Next images'}
-            onClick={onClick}
-          >
-            {isLeft ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+          <IconButton aria-label={isLeft ? 'Previous images' : 'Next images'} onClick={onClick}>
+            {isLeft ? <ChevronLeftIcon size={20} /> : <ChevronRightIcon size={20} />}
           </IconButton>
         </motion.div>
       )}

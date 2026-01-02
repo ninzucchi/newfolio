@@ -20,7 +20,7 @@ export function CarouselImage({
       type="button"
       onClick={onClick}
       className={cn(
-        'bg-secondary w-[95%] shrink-0 overflow-hidden rounded-lg',
+        'bg-secondary w-[95%] shrink-0 overflow-hidden rounded-md',
         isDragging ? 'cursor-grabbing' : 'cursor-grab',
         !isLoaded && 'aspect-4/3 animate-pulse'
       )}
@@ -28,7 +28,7 @@ export function CarouselImage({
       <BaseImage
         src={src}
         alt={alt}
-        className="outline-border-default h-full rounded-lg"
+        className="outline-border-default h-full rounded-md"
         isLoaded={isLoaded}
         onLoad={onLoad}
       />

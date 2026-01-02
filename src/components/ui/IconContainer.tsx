@@ -8,7 +8,7 @@ export function IconContainer({
   return (
     <div
       className={cn(
-        'flex justify-center items-center w-11 h-11 rounded-lg border bg-secondary border-border',
+        'bg-secondary border-border flex h-11 w-11 items-center justify-center rounded-md border',
         className
       )}
       {...props}

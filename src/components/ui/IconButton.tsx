@@ -24,7 +24,7 @@ export function IconButton({
         'flex items-center justify-center rounded-full',
         size === 'md' ? 'h-10 w-10' : 'h-6 w-6',
         // Colors
-        'bg-primary/50 backdrop-blur-sm',
+        'bg-primary/50 backdrop-blur-md',
         // Typography
         'text-fg-secondary hover:text-fg-primary',
         // Interactive states

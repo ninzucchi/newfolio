@@ -24,12 +24,12 @@ export function ProjectImage({
       <button
         type="button"
         onClick={() => setOpenIndex(imageIndex)}
-        className={`bg-secondary w-full cursor-zoom-in rounded-lg ${!isLoaded ? 'aspect-4/3 animate-pulse' : ''}`}
+        className={`bg-secondary w-full cursor-zoom-in rounded-md ${!isLoaded ? 'aspect-4/3 animate-pulse' : ''}`}
       >
         <BaseImage
           src={src}
           alt={alt}
-          className="outline-border-default h-full rounded-lg"
+          className="outline-border-default h-full rounded-md"
           isLoaded={isLoaded}
           onLoad={onLoad}
         />

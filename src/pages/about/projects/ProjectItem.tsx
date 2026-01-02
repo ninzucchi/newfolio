@@ -1,10 +1,8 @@
 import { ImageCarousel } from '@/components/ui/carousel/ImageCarousel';
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
-import { IconButton } from '@/components/ui/IconButton';
 import { Text } from '@/components/ui/text/Text';
+import { CopyLinkButton } from '@/pages/about/projects/CopyLinkButton';
 import { ProjectImage } from '@/pages/about/projects/ProjectImage';
-import { Check, Link2 } from 'lucide-react';
-import { useCallback, useState } from 'react';
 
 export function ProjectItem({
   projectIndex,
@@ -22,30 +20,17 @@ export function ProjectItem({
   images: string[];
 }) {
   const isSingleImage = images.length === 1;
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyLink = useCallback(() => {
-    const url = `${window.location.origin}/#${slug}`;
-    navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  }, [slug]);
+  const url = `${window.location.origin}/#${slug}`;
 
   return (
     <div id={slug} className="group col-span-2 grid grid-cols-subgrid gap-y-6">
       <GridCell>
         <div className="flex items-center gap-2">
           <Text.B3>{title}</Text.B3>
-          <IconButton
-            onClick={handleCopyLink}
-            aria-label="Copy link to project"
-            size="sm"
-            className={`transition-all ${
-              copied ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-            }`}
-          >
-            {copied ? <Check size={14} /> : <Link2 size={14} />}
-          </IconButton>
+          <CopyLinkButton
+            url={url}
+            className="transition-all group-hover:opacity-100 sm:opacity-0"
+          />
         </div>
         <Text.B4 className="text-fg-secondary">{description}</Text.B4>
       </GridCell>

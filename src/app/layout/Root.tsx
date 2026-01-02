@@ -1,5 +1,6 @@
 import { Content } from '@/app/layout/Content';
 import { Nav } from '@/components/ui/Nav';
+import { Toaster } from '@/components/ui/sonner';
 import { Outlet, useLocation } from '@tanstack/react-router';
 import { useEffect } from 'react';
 
@@ -16,6 +17,7 @@ export function Root() {
       <Content>
         <Outlet />
       </Content>
+      <Toaster />
     </div>
   );
 }

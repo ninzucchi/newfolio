@@ -3,7 +3,7 @@ import { defaultEasing, longDuration } from '@/lib/animation';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'lucide-react';
 import { useEffect } from 'react';
 
 function LightboxLayout({ children }: { children: React.ReactNode }) {
@@ -73,7 +73,7 @@ export function Lightbox({
                 </VisuallyHidden.Root>
                 <Dialog.Close className="pointer-events-auto absolute top-4 right-4">
                   <IconButton aria-label="Close lightbox">
-                    <X size={20} />
+                    <XIcon size={20} />
                   </IconButton>
                 </Dialog.Close>
                 {onPrev && <LightboxNavButton direction="prev" onClick={onPrev} />}
@@ -106,7 +106,7 @@ function LightboxNavButton({
       className={`pointer-events-auto absolute top-1/2 z-1 -translate-y-1/2 ${isPrev ? 'left-4' : 'right-4'}`}
     >
       <IconButton aria-label={isPrev ? 'Previous image' : 'Next image'}>
-        {isPrev ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+        {isPrev ? <ChevronLeftIcon size={20} /> : <ChevronRightIcon size={20} />}
       </IconButton>
     </button>
   );

@@ -16,3 +16,7 @@ body {
   color: var(--color-foreground);
   background-color: var(--color-background);
 }
+
+[data-sonner-toast] {
+  backdrop-filter: blur(12px);
+}
