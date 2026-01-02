@@ -203,19 +203,13 @@ export const gear = [
 ];
 
 export const skills = {
-  Design: [
-    'User Interface Design',
-    'User Experience Design',
-    'Design Systems',
-    'Prototyping',
-    'Visual Design',
-  ],
-  Development: ['React', 'TypeScript', 'JavaScript', 'CSS/HTML', 'Component Architecture'],
+  Design: ['Systems design', 'Product design', 'Prototyping', 'Fast sketching', 'Slow refinement'],
+  Engineering: ['TypeScript', 'React', 'Radix', 'CSS', 'Git'],
   Product: [
-    'Product Strategy',
-    'User Research',
-    'Product Management',
-    'A/B Testing',
-    'Data Analysis',
+    'Product management',
+    'Product strategy',
+    'Experiment design',
+    'Data analysis',
+    'Linear',
   ],
 };

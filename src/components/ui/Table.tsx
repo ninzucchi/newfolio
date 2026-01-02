@@ -7,7 +7,7 @@ const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableE
     <div className="relative w-full overflow-auto">
       <table
         ref={ref}
-        className={cn('border-border w-full caption-bottom text-sm', className)}
+        className={cn('border-border w-full caption-bottom', className)}
         {...props}
       />
     </div>
@@ -46,7 +46,11 @@ const TableHead = React.forwardRef<
   HTMLTableCellElement,
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
-  <th ref={ref} className={cn('h-10 px-2 text-left align-middle', className)} {...props} />
+  <th
+    ref={ref}
+    className={cn('bg-secondary h-10 px-2 text-left align-middle font-normal', className)}
+    {...props}
+  />
 ));
 TableHead.displayName = 'TableHead';
 
@@ -58,4 +62,18 @@ const TableCell = React.forwardRef<
 ));
 TableCell.displayName = 'TableCell';
 
-export { Table, TableBody, TableCell, TableHead, TableHeader, TableRow };
+const TableContainer = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div className={cn('border-border overflow-hidden rounded-md border', className)}>
+      {children}
+    </div>
+  );
+};
+
+export { Table, TableBody, TableCell, TableContainer, TableHead, TableHeader, TableRow };
