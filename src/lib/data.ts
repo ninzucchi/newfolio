@@ -1,6 +1,6 @@
-import { SubstackIcon } from '@/components/icons/SubstackIcon';
-import { MetaIcon } from '@/components/icons/MetaIcon';
 import { IDEOIcon } from '@/components/icons/IDEOIcon';
+import { MetaIcon } from '@/components/icons/MetaIcon';
+import { SubstackIcon } from '@/components/icons/SubstackIcon';
 
 export const experience = [
   {
@@ -163,30 +163,27 @@ export const projects = [
 export const gear = [
   {
     name: 'Fujifilm X-T5',
-    nameUrl:
-      'https://www.bhphotovideo.com/c/product/1899771-REG/fujifilm_16953857_x_t5_body_black_coo_japan.html',
+    nameUrl: 'https://www.fujifilm-x.com/en-us/products/cameras/x-t5/',
     category: 'Body',
   },
   {
     name: 'Fujinon XF70-300mm f/4 - f/5.6',
-    nameUrl:
-      'https://www.bhphotovideo.com/c/product/1618891-REG/fujifilm_16666868_xf_70_300mm_f_4_5_6_r.html',
+    nameUrl: 'https://fujiframe.com/fujifilm-lenses/fuji-70-300mm-f4-5-6-r-lm-ois-wr-lens',
     category: 'Lens',
   },
   {
     name: 'Fujinon XF 50mm f/2 R WR',
-    nameUrl:
-      'https://www.bhphotovideo.com/c/product/1311239-REG/fujifilm_16536611_xf50mmf2_r_wr_mid.html',
+    nameUrl: 'https://fujiframe.com/fujifilm-lenses/fuji-50mm-f2-r-wr-lens',
     category: 'Lens',
   },
   {
     name: 'Fujinon XF 35mm f/2 R WR',
-    nameUrl: 'https://www.bhphotovideo.com/c/product/1191420-REG/fujifilm_xf_35mm_f_2_r.html',
+    nameUrl: 'https://fujiframe.com/fujifilm-lenses/fuji-35mm-f2-r-wr-lens',
     category: 'Lens',
   },
   {
     name: 'Fujinon XF 16mm f/1.4 R WR',
-    nameUrl: 'https://www.bhphotovideo.com/c/product/1138987-REG/fujifilm_xf_16mm_f_1_4_r.html',
+    nameUrl: 'https://fujiframe.com/fujifilm-lenses/fuji-16mm-f1-4-r-wr-lens',
     category: 'Lens',
   },
 ];
