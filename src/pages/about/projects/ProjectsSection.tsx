@@ -12,6 +12,7 @@ export function ProjectsSection() {
         {projects.map((project, index) => (
           <ProjectItem
             key={index}
+            projectIndex={index}
             title={project.title}
             description={project.description}
             year={project.year}

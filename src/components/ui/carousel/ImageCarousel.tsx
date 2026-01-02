@@ -3,22 +3,24 @@ import { CarouselNavButton } from '@/components/ui/carousel/CarouselNavButton';
 import { useCarouselScroll } from '@/components/ui/carousel/useCarouselScroll';
 import { Lightbox } from '@/components/ui/lightbox/Lightbox';
 import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
+import { useProjectImageState } from '@/hooks/useProjectImageState';
 import { useDragScroll } from '@/hooks/useDragScroll';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
 
 export function ImageCarousel({
+  projectIndex,
   images,
   alt,
   className,
 }: {
+  projectIndex: number;
   images: string[];
   alt: string;
   className?: string;
 }) {
   const { scrollRef, canScrollLeft, canScrollRight, scrollToDirection } = useCarouselScroll();
   const dragScroll = useDragScroll(scrollRef);
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useProjectImageState(projectIndex, images.length);
 
   const currentImage = openIndex !== null ? images[openIndex] : null;
   const hasPrev = openIndex !== null && openIndex > 0;

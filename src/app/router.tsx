@@ -7,20 +7,26 @@ const rootRoute = createRootRoute({
   component: Root,
 });
 
+type IndexSearch = { p?: number; i?: number };
+
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: AboutPage,
+  validateSearch: (search: Record<string, unknown>): IndexSearch => ({
+    p: typeof search.p === 'number' ? search.p : undefined,
+    i: typeof search.i === 'number' ? search.i : undefined,
+  }),
 });
 
-type PhotosSearch = { p?: number };
+type PhotosSearch = { i?: number };
 
 const photosRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/photos',
   component: PhotosPage,
   validateSearch: (search: Record<string, unknown>): PhotosSearch => ({
-    p: typeof search.p === 'number' ? search.p : undefined,
+    i: typeof search.i === 'number' ? search.i : undefined,
   }),
 });
 

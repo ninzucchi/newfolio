@@ -4,15 +4,16 @@ import { useNavigate, useSearch } from '@tanstack/react-router';
 import { useCallback } from 'react';
 
 export function usePhotos() {
-  const { p } = useSearch({ from: '/photos' });
+  const { i } = useSearch({ from: '/photos' });
   const navigate = useNavigate({ from: '/photos' });
 
-  const openIndex = p !== undefined && p >= 0 && p < photoIds.length ? p : null;
+  // Convert 1-based URL param to 0-based index
+  const openIndex = i !== undefined && i >= 1 && i <= photoIds.length ? i - 1 : null;
 
   const setOpenIndex = useCallback(
     (index: number | null) => {
       navigate({
-        search: index === null ? {} : { p: index },
+        search: index === null ? {} : { i: index + 1 },
         replace: true,
       });
     },
