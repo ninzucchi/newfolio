@@ -3,8 +3,8 @@ import { CarouselNavButton } from '@/components/ui/carousel/CarouselNavButton';
 import { useCarouselScroll } from '@/components/ui/carousel/useCarouselScroll';
 import { Lightbox } from '@/components/ui/lightbox/Lightbox';
 import { LightboxImage } from '@/components/ui/lightbox/LightboxImage';
-import { useProjectImageState } from '@/hooks/useProjectImageState';
 import { useDragScroll } from '@/hooks/useDragScroll';
+import { useProjectImageState } from '@/hooks/useProjectImageState';
 import { cn } from '@/lib/utils';
 
 export function ImageCarousel({

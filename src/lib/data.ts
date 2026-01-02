@@ -44,6 +44,7 @@ export const education = [
 export const projects = [
   // Substack projects
   {
+    slug: 'substack-app',
     title: 'Substack app',
     description:
       'Contributed to all aspects of the Substack mobile app, including creation, reading, audio/video, and more.',
@@ -51,6 +52,7 @@ export const projects = [
     images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
   },
   {
+    slug: 'substack-design-system',
     title: 'Substack design system',
     description:
       'Established the foundational UI and component architecture powering all new Substack product development.',
@@ -58,6 +60,7 @@ export const projects = [
     images: ['/projects/pencraft-01.jpg', '/projects/pencraft-02.jpg'],
   },
   {
+    slug: 'substack-creator-dashboard',
     title: 'Substack creator dashboard',
     description:
       'Re-architected the primary creator control surface to streamline publishing, analytics, and subscriber management.',
@@ -71,6 +74,7 @@ export const projects = [
     ],
   },
   {
+    slug: 'substack-web-reader',
     title: 'Substack web reader',
     description:
       'Translated the Substack mobile app into a best-in-class desktop reading experience.',
@@ -83,12 +87,14 @@ export const projects = [
     ],
   },
   {
+    slug: 'substack-notes',
     title: 'Substack notes',
     description: 'Introduced a new short-form format to evolve Substack into a social product.',
     year: '2022',
     images: ['/projects/notes-01.jpg', '/projects/notes-02.jpg', '/projects/notes-03.jpg'],
   },
   {
+    slug: 'substack-chat',
     title: 'Substack chat',
     description:
       'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
@@ -97,6 +103,7 @@ export const projects = [
   },
   // Meta projects
   {
+    slug: 'facebook-civic-integrity',
     title: 'Facebook civic integrity',
     description:
       'Developed crowdsourced fact checking and moderation systems to mitigate the spread of misinformation and harmful content in the Global South.',
@@ -109,6 +116,7 @@ export const projects = [
     ],
   },
   {
+    slug: 'facebook-lightweight-feedback',
     title: 'Facebook lightweight feedback',
     description:
       'Introduced a low-friction signal for dismissing feed content, enabling users to train ranking systems through negative feedback.',
@@ -116,6 +124,7 @@ export const projects = [
     images: ['/projects/feedback-01.jpg'],
   },
   {
+    slug: 'facebook-blood-donations',
     title: 'Facebook blood donations',
     description:
       'Created a platform-wide system for requesting and fulfilling blood donations, connecting donors and organizations to address acute shortages.',
@@ -124,6 +133,7 @@ export const projects = [
   },
   // IDEO projects
   {
+    slug: 'american-express-pay-it-plan-it',
     title: 'American Express Pay-it / Plan-it',
     description:
       'Designed a pair of swipe-based repayment tools to reduce debt anxiety and make payments easier to manage.',
@@ -131,6 +141,7 @@ export const projects = [
     images: ['/projects/amex-02.jpg', '/projects/amex-01.jpg'],
   },
   {
+    slug: 'google-kubits',
     title: 'Google Kubits',
     description:
       'Developed a physical, game-driven system that taught core programming concepts through modular, code-like play.',
@@ -138,6 +149,7 @@ export const projects = [
     images: ['/projects/google-01.jpg', '/projects/google-02.jpg', '/projects/google-03.jpg'],
   },
   {
+    slug: 'bayer-contour-one',
     title: 'Bayer Contour One',
     description:
       'Created a connected hardware and app ecosystem that made glucose, insulin, and lifestyle data legible and actionable for patients and clinicians.',
@@ -145,6 +157,7 @@ export const projects = [
     images: ['/projects/bayer-01.jpg'],
   },
   {
+    slug: 'nfl-tv-app-experience',
     title: 'NFL TV app experience',
     description:
       'Defined early UI patterns for browsing live games, highlights, and archives on smart TVs.',
@@ -152,6 +165,7 @@ export const projects = [
     images: ['/projects/nfl-02.jpg'],
   },
   {
+    slug: 'ford-driver-experience',
     title: 'Ford driver experience',
     description:
       'Designed steering-wheel–driven interfaces that centralized navigation, media, and communication into a hands-on, eyes-up driving experience.',
