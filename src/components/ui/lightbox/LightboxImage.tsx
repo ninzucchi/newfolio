@@ -11,15 +11,11 @@ export function LightboxImage({
   alt: string;
   className?: string;
 }) {
-  const { isLoaded, onLoad } = useImageLoaded();
+  const { isLoaded, onLoad } = useImageLoaded(src);
 
   return (
     <div className="relative flex items-center justify-center">
-      {!isLoaded && (
-        <div className="absolute">
-          <Spinner />
-        </div>
-      )}
+      {!isLoaded && <Spinner className="absolute z-1" />}
       <img
         src={src}
         alt={alt}
