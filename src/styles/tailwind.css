@@ -89,6 +89,22 @@
   transition-timing-function: var(--easing-default);
 }
 
+.spinner-fg {
+  stroke-linecap: round;
+  stroke-dasharray: calc(11 * 3.14159 * 2 * 0.25) calc(11 * 3.14159 * 2 * 0.75);
+  animation: spin 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    transform: rotate(585deg);
+  }
+}
+
 @layer base {
   button,
   a,

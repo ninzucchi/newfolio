@@ -101,7 +101,7 @@ function LightboxNavButton({
         e.stopPropagation();
         onClick();
       }}
-      className={`pointer-events-auto absolute top-1/2 -translate-y-1/2 ${isPrev ? 'left-4' : 'right-4'}`}
+      className={`pointer-events-auto absolute top-1/2 z-1 -translate-y-1/2 ${isPrev ? 'left-4' : 'right-4'}`}
     >
       <IconButton
         icon={isPrev ? ChevronLeft : ChevronRight}
