@@ -45,6 +45,13 @@
     oklch(100% 0 0 / 0.125) 70%,
     oklch(100% 0 0 / 0.2)
   );
+
+  /* GitHub contribution levels */
+  --color-github-0: #151b23;
+  --color-github-1: #033a16;
+  --color-github-2: #196c2e;
+  --color-github-3: #2ea043;
+  --color-github-4: #56d364;
 }
 
 .glass-border {

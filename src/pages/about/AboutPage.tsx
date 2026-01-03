@@ -1,4 +1,5 @@
 import { Page } from '@/components/ui/Page';
+import { ActivitySection } from '@/pages/about/activity/ActivitySection';
 import { BioSection } from '@/pages/about/bio/BioSection';
 import { EducationSection } from '@/pages/about/education/EducationSection';
 import { ExperienceSection } from '@/pages/about/experience/ExperienceSection';
@@ -12,6 +13,7 @@ export function AboutPage() {
       <ExperienceSection />
       <EducationSection />
       <SkillsSection />
+      <ActivitySection />
       <ProjectsSection />
     </Page>
   );

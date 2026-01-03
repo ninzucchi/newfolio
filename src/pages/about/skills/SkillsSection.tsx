@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from '@/components/ui/Table';
 import { Text } from '@/components/ui/text/Text';
 import { skills } from '@/lib/data';
 
