@@ -12,9 +12,9 @@ export function AboutPage() {
       <BioSection />
       <ExperienceSection />
       <EducationSection />
-      <SkillsSection />
-      <ActivitySection />
       <ProjectsSection />
+      <ActivitySection />
+      <SkillsSection />
     </Page>
   );
 }
