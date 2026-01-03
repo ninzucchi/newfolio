@@ -48,12 +48,7 @@ export function ContributionGrid({
       >
         {displayWeeks.flatMap((week, weekIndex) =>
           week.map((contribution, dayIndex) => (
-            <ContributionCell
-              key={`${weekIndex}-${dayIndex}`}
-              level={contribution?.level ?? 0}
-              date={contribution?.date}
-              count={contribution?.count}
-            />
+            <ContributionCell key={`${weekIndex}-${dayIndex}`} level={contribution?.level ?? 0} />
           ))
         )}
       </div>
