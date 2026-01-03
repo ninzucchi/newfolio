@@ -1,6 +1,6 @@
 import { Content } from '@/app/layout/Content';
 import { Nav } from '@/components/ui/Nav';
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from '@/components/ui/Sonner';
 import { Outlet, useLocation } from '@tanstack/react-router';
 import { useEffect } from 'react';
 
