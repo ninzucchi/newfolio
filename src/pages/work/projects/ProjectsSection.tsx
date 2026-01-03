@@ -1,7 +1,7 @@
 import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import { projects } from '@/lib/data';
-import { ProjectItem } from '@/pages/about/projects/ProjectItem';
-import { ProjectsGrid } from '@/pages/about/projects/ProjectsGrid';
+import { ProjectItem } from '@/pages/work/projects/ProjectItem';
+import { ProjectsGrid } from '@/pages/work/projects/ProjectsGrid';
 
 export function ProjectsSection({ defaultOpen }: { defaultOpen?: boolean }) {
   return (

@@ -3,7 +3,7 @@ import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { education } from '@/lib/data';
-import { EducationGrid } from '@/pages/about/education/EducationGrid';
+import { EducationGrid } from '@/pages/work/education/EducationGrid';
 import { Fragment } from 'react';
 
 export function EducationSection({ defaultOpen }: { defaultOpen?: boolean }) {

@@ -9,9 +9,7 @@ export function PhotosHeader({
   return (
     <GridCell className="items-center">
       <Text.B1>Photography</Text.B1>
-      <Text.B4 className="text-fg-secondary">
-        {`${images.length - 1} shots captured lately`}
-      </Text.B4>
+      <Text.B4 className="text-fg-secondary">{`${images.length - 1} select shots`}</Text.B4>
     </GridCell>
   );
 }

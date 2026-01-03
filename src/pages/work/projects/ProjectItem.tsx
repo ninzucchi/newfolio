@@ -2,8 +2,8 @@ import { ImageCarousel } from '@/components/ui/carousel/ImageCarousel';
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
-import { CopyLinkButton } from '@/pages/about/projects/CopyLinkButton';
-import { ProjectImage } from '@/pages/about/projects/ProjectImage';
+import { CopyLinkButton } from '@/pages/work/projects/CopyLinkButton';
+import { ProjectImage } from '@/pages/work/projects/ProjectImage';
 
 export function ProjectItem({
   projectIndex,
