@@ -8,13 +8,13 @@ import { SkillsSection } from '@/pages/about/skills/SkillsSection';
 
 export function AboutPage() {
   return (
-    <Page>
+    <Page className="gap-8">
       <BioSection />
       <ExperienceSection />
-      <EducationSection />
+      <EducationSection defaultOpen={false} />
+      <ActivitySection defaultOpen={false} />
+      <SkillsSection defaultOpen={false} />
       <ProjectsSection />
-      <ActivitySection />
-      <SkillsSection />
     </Page>
   );
 }

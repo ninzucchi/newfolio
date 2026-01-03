@@ -1,13 +1,11 @@
-import { Section } from '@/components/ui/section/Section';
-import { SectionHeader } from '@/components/ui/section/SectionHeader';
+import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import { projects } from '@/lib/data';
 import { ProjectItem } from '@/pages/about/projects/ProjectItem';
 import { ProjectsGrid } from '@/pages/about/projects/ProjectsGrid';
 
-export function ProjectsSection() {
+export function ProjectsSection({ defaultOpen }: { defaultOpen?: boolean }) {
   return (
-    <Section>
-      <SectionHeader>Projects</SectionHeader>
+    <SectionCollapsible title="Projects" defaultOpen={defaultOpen}>
       <ProjectsGrid>
         {projects.map((project, index) => (
           <ProjectItem
@@ -21,6 +19,6 @@ export function ProjectsSection() {
           />
         ))}
       </ProjectsGrid>
-    </Section>
+    </SectionCollapsible>
   );
 }

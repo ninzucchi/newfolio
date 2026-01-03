@@ -1,14 +1,14 @@
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
-import { SectionCollapsible } from '@/components/ui/section/Section';
+import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { education } from '@/lib/data';
 import { EducationGrid } from '@/pages/about/education/EducationGrid';
 import { Fragment } from 'react';
 
-export function EducationSection() {
+export function EducationSection({ defaultOpen }: { defaultOpen?: boolean }) {
   return (
-    <SectionCollapsible title="Education">
+    <SectionCollapsible title="Education" defaultOpen={defaultOpen}>
       <EducationGrid>
         {education.map((item, index) => (
           <Fragment key={index}>

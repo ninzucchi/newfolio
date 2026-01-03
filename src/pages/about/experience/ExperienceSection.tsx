@@ -1,15 +1,15 @@
 import { GridCell, GridCellFit, GridCellRight } from '@/components/ui/grid/GridCell';
 import { IconContainer } from '@/components/ui/IconContainer';
-import { SectionCollapsible } from '@/components/ui/section/Section';
+import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { experience } from '@/lib/data';
 import { ExperienceGrid } from '@/pages/about/experience/ExperienceGrid';
 import { Fragment } from 'react';
 
-export function ExperienceSection() {
+export function ExperienceSection({ defaultOpen }: { defaultOpen?: boolean }) {
   return (
-    <SectionCollapsible title="Experience">
+    <SectionCollapsible title="Experience" defaultOpen={defaultOpen}>
       <ExperienceGrid>
         {experience.map((item, index) => {
           const IconComponent = item.icon;

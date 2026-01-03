@@ -1,5 +1,5 @@
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
-import { SectionCollapsible } from '@/components/ui/section/Section';
+import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import { Text } from '@/components/ui/text/Text';
 import { TextLink } from '@/components/ui/text/TextLink';
 import { gear } from '@/lib/data';

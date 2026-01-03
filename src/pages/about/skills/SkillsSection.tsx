@@ -1,4 +1,4 @@
-import { SectionCollapsible } from '@/components/ui/section/Section';
+import { SectionCollapsible } from '@/components/ui/section/SectionCollapsible';
 import {
   Table,
   TableBody,
@@ -11,11 +11,11 @@ import {
 import { Text } from '@/components/ui/text/Text';
 import { skills } from '@/lib/data';
 
-export function SkillsSection() {
+export function SkillsSection({ defaultOpen }: { defaultOpen?: boolean }) {
   const maxRows = Math.max(skills.Design.length, skills.Engineering.length, skills.Product.length);
 
   return (
-    <SectionCollapsible title="Skills">
+    <SectionCollapsible title="Skills" defaultOpen={defaultOpen}>
       <TableContainer>
         <Table className="[table-layout:fixed]">
           <TableHeader>

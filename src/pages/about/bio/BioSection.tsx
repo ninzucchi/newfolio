@@ -5,7 +5,7 @@ import { ContactButton } from './ContactButton';
 
 export function BioSection() {
   return (
-    <Section>
+    <Section className="pb-8">
       <BioHeader />
       <BioParagraph />
       <ContactButton />
