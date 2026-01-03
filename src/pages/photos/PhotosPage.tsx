@@ -42,5 +42,5 @@ export function PhotosPage() {
 }
 
 function TopContainer({ children }: { children: React.ReactNode }) {
-  return <div className="mx-auto flex w-full max-w-[600px] flex-col gap-16">{children}</div>;
+  return <div className="mx-auto flex w-full max-w-[600px] flex-col gap-12">{children}</div>;
 }
