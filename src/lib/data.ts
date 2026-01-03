@@ -53,25 +53,15 @@ export const projects: {
   {
     slug: 'substack-app',
     title: 'Substack app',
-    description:
-      'Contributed to all aspects of the Substack mobile app, including creation, reading, audio/video, and more.',
+    description: 'The best way for creators and their readers to experience Substack.',
     year: '2025',
     images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
-    url: 'https://apps.apple.com/us/app/substack/id1581650857',
-  },
-  {
-    slug: 'substack-design-system',
-    title: 'Substack design system',
-    description:
-      'Established the foundational UI and component architecture powering all new Substack product development.',
-    year: '2025',
-    images: ['/projects/pencraft-01.jpg', '/projects/pencraft-02.jpg'],
   },
   {
     slug: 'substack-creator-dashboard',
     title: 'Substack creator dashboard',
     description:
-      'Re-architected the primary creator control surface to streamline publishing, analytics, and subscriber management.',
+      'The primary surface for creators to publish, view analytics, and manage their audiences on Substack.',
     year: '2024',
     images: [
       '/projects/dashboard-01.jpg',
@@ -85,7 +75,7 @@ export const projects: {
     slug: 'substack-web-reader',
     title: 'Substack web reader',
     description:
-      'Translated the Substack mobile app into a best-in-class desktop reading experience.',
+      'A fully-featured desktop reading experience that brings the Substack app to the web.',
     year: '2023',
     images: [
       '/projects/reader-01.jpg',
@@ -97,7 +87,8 @@ export const projects: {
   {
     slug: 'substack-notes',
     title: 'Substack notes',
-    description: 'Introduced a new short-form format to evolve Substack into a social product.',
+    description:
+      "Substack's flagship short-form format, allowing creators to publish with less pressure.",
     year: '2022',
     images: ['/projects/notes-01.jpg', '/projects/notes-02.jpg', '/projects/notes-03.jpg'],
   },
@@ -105,16 +96,23 @@ export const projects: {
     slug: 'substack-chat',
     title: 'Substack chat',
     description:
-      'Introduced a creator-governed community layer for real-time reader conversation within a publication.',
+      'A community space for creators to host real-time conversations with their readers.',
     year: '2021',
     images: ['/projects/chat-01.jpg', '/projects/chat-02.jpg', '/projects/chat-03.jpg'],
+  },
+  {
+    slug: 'substack-design-system',
+    title: 'Substack design system',
+    description: 'The foundational UI and component kit powering all new Substack features.',
+    year: '2025',
+    images: ['/projects/pencraft-01.jpg', '/projects/pencraft-02.jpg'],
   },
   // Meta projects
   {
     slug: 'facebook-civic-integrity',
     title: 'Facebook civic integrity',
     description:
-      'Developed crowdsourced fact checking and moderation systems to mitigate the spread of misinformation and harmful content in the Global South.',
+      'A crowdsourced fact checking and moderation system to help prevent the spread of misinformation in the Global South.',
     year: '2020',
     images: [
       '/projects/civic-01.jpg',
@@ -127,7 +125,7 @@ export const projects: {
     slug: 'facebook-lightweight-feedback',
     title: 'Facebook lightweight feedback',
     description:
-      'Introduced a low-friction signal for dismissing feed content, enabling users to train ranking systems through negative feedback.',
+      'A low-friction interaction to dismiss unwanted content, letting users train their algorithms via negative feedback.',
     year: '2019',
     images: ['/projects/feedback-01.jpg'],
   },
@@ -135,7 +133,7 @@ export const projects: {
     slug: 'facebook-blood-donations',
     title: 'Facebook blood donations',
     description:
-      'Created a platform-wide system for requesting and fulfilling blood donations, connecting donors and organizations to address acute shortages.',
+      'A platform-wide network to connect donors to organizations addressing acute blood shortage.',
     year: '2018',
     images: ['/projects/blood-01.jpg', '/projects/blood-02.jpg'],
   },
@@ -144,7 +142,7 @@ export const projects: {
     slug: 'american-express-pay-it-plan-it',
     title: 'American Express Pay-it / Plan-it',
     description:
-      'Designed a pair of swipe-based repayment tools to reduce debt anxiety and make payments easier to manage.',
+      "A pair of signature interactions to help reduce users' anxiety around credit card debt.",
     year: '2015',
     images: ['/projects/amex-02.jpg', '/projects/amex-01.jpg'],
   },
@@ -152,7 +150,7 @@ export const projects: {
     slug: 'google-kubits',
     title: 'Google Kubits',
     description:
-      'Developed a physical, game-driven system that taught core programming concepts through modular, code-like play.',
+      'A game-driven system that teaches core programming concepts through physical play.',
     year: '2014',
     images: ['/projects/google-01.jpg', '/projects/google-02.jpg', '/projects/google-03.jpg'],
   },
@@ -160,7 +158,7 @@ export const projects: {
     slug: 'bayer-contour-one',
     title: 'Bayer Contour One',
     description:
-      'Created a connected hardware and app ecosystem that made glucose, insulin, and lifestyle data legible and actionable for patients and clinicians.',
+      'A connected sensor and wearable app to make diabetes data legible to patients and clinicians.',
     year: '2014',
     images: ['/projects/bayer-01.jpg'],
   },
@@ -168,7 +166,7 @@ export const projects: {
     slug: 'nfl-tv-app-experience',
     title: 'NFL TV app experience',
     description:
-      'Defined early UI patterns for browsing live games, highlights, and archives on smart TVs.',
+      'A vision for the first smart TV app from the NFL, letting users browse games, highlights, and more.',
     year: '2013',
     images: ['/projects/nfl-02.jpg'],
   },
@@ -176,7 +174,7 @@ export const projects: {
     slug: 'ford-driver-experience',
     title: 'Ford driver experience',
     description:
-      'Designed steering-wheel–driven interfaces that centralized navigation, media, and communication into a hands-on, eyes-up driving experience.',
+      'A steering-wheel–controlled interface to let drivers navigate, communicate, and more with their hands on the wheel.',
     year: '2012',
     images: ['/projects/ford-02.jpg'],
   },
