@@ -16,6 +16,7 @@ export function ProjectsSection({ defaultOpen }: { defaultOpen?: boolean }) {
             description={project.description}
             year={project.year}
             images={project.images}
+            url={project.url}
           />
         ))}
       </ProjectsGrid>

@@ -1,6 +1,7 @@
 import { ImageCarousel } from '@/components/ui/carousel/ImageCarousel';
 import { GridCell, GridCellRight } from '@/components/ui/grid/GridCell';
 import { Text } from '@/components/ui/text/Text';
+import { TextLink } from '@/components/ui/text/TextLink';
 import { CopyLinkButton } from '@/pages/about/projects/CopyLinkButton';
 import { ProjectImage } from '@/pages/about/projects/ProjectImage';
 
@@ -11,6 +12,7 @@ export function ProjectItem({
   description,
   year,
   images,
+  url: projectUrl,
 }: {
   projectIndex: number;
   slug: string;
@@ -18,17 +20,26 @@ export function ProjectItem({
   description: string;
   year: string;
   images: string[];
+  url?: string;
 }) {
   const isSingleImage = images.length === 1;
-  const url = `${window.location.origin}/#${slug}`;
+  const copyUrl = `${window.location.origin}/#${slug}`;
 
   return (
     <div id={slug} className="group col-span-2 grid scroll-mt-20 grid-cols-subgrid gap-y-6">
       <GridCell>
         <div className="flex items-center gap-2">
-          <Text.B3>{title}</Text.B3>
+          {projectUrl ? (
+            <Text.B3>
+              <TextLink href={projectUrl} newTab>
+                {title}
+              </TextLink>
+            </Text.B3>
+          ) : (
+            <Text.B3>{title}</Text.B3>
+          )}
           <CopyLinkButton
-            url={url}
+            url={copyUrl}
             className="transition-all group-hover:opacity-100 sm:opacity-0"
           />
         </div>

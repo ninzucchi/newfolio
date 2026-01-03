@@ -41,7 +41,14 @@ export const education = [
   },
 ];
 
-export const projects = [
+export const projects: {
+  slug: string;
+  title: string;
+  description: string;
+  year: string;
+  images: string[];
+  url?: string;
+}[] = [
   // Substack projects
   {
     slug: 'substack-app',
@@ -50,6 +57,7 @@ export const projects = [
       'Contributed to all aspects of the Substack mobile app, including creation, reading, audio/video, and more.',
     year: '2025',
     images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
+    url: 'https://apps.apple.com/us/app/substack/id1581650857',
   },
   {
     slug: 'substack-design-system',

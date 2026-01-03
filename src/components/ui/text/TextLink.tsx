@@ -10,7 +10,7 @@ export function TextLink({
   return (
     <a
       className={cn(
-        'decoration-fg-tertiary condary decoration-1 underline-offset-[0.2em]',
+        'decoration-fg-tertiary hover:decoration-fg-primary underline decoration-1 underline-offset-[0.2em] transition-colors duration-200',
         className
       )}
       target={newTab ? '_blank' : target}
