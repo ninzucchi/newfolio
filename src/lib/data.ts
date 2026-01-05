@@ -55,7 +55,12 @@ export const projects: {
     title: 'Substack app',
     description: 'The best way for creators and their readers to experience Substack.',
     year: '2025',
-    images: ['/projects/app-01.jpg', '/projects/app-02.jpg', '/projects/app-03.jpg'],
+    images: [
+      '/projects/app-01.jpg',
+      '/projects/app-02.jpg',
+      '/projects/app-03.jpg',
+      '/projects/app-04.jpg',
+    ],
   },
   {
     slug: 'substack-creator-dashboard',
