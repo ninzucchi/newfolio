@@ -1,13 +1,21 @@
+import { CursorIcon } from '@/components/icons/CursorIcon';
 import { IDEOIcon } from '@/components/icons/IDEOIcon';
 import { MetaIcon } from '@/components/icons/MetaIcon';
 import { SubstackIcon } from '@/components/icons/SubstackIcon';
 
 export const experience = [
   {
+    company: 'Cursor',
+    companyUrl: 'https://cursor.com',
+    role: 'Product Designer',
+    period: '2026-Present',
+    icon: CursorIcon,
+  },
+  {
     company: 'Substack',
     companyUrl: 'https://substack.com',
     role: 'Product Design Lead, Design Engineer',
-    period: '2020-Present',
+    period: '2020-2026',
     icon: SubstackIcon,
   },
   {
