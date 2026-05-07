@@ -5,7 +5,7 @@
   --color-fg-tertiary: oklch(50% 0 0);
 
   /* Background colors (surfaces) - use with bg-{name} */
-  --color-primary: oklch(5% 0 0);
+  --color-primary: oklch(22% 0.14 22);
   --color-secondary: oklch(20% 0 0);
   --color-tertiary: oklch(33% 0 0);
 
