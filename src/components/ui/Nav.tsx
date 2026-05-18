@@ -3,7 +3,7 @@ import { routes } from '@/lib/routes';
 import { useLocation, useNavigate } from '@tanstack/react-router';
 
 const navItems = [
-  { path: routes.index, label: 'Work', value: 'index' },
+  { path: routes.index, label: 'About', value: 'index' },
   { path: routes.photos, label: 'Photos', value: 'photos' },
 ];
 
