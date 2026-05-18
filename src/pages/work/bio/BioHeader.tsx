@@ -22,7 +22,7 @@ export function BioHeader() {
       </div>
       <GridCell className="flex-1">
         <Text.B1>Nick Inzucchi</Text.B1>
-        <Text.B4 className="text-fg-secondary">Designer, engineer, product generalist</Text.B4>
+        <Text.B4 className="text-fg-secondary">Product designer · Design engineer</Text.B4>
       </GridCell>
       <SocialLinks />
     </div>
