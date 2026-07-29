@@ -29,7 +29,7 @@ export function CarouselNavButton({
               : 'absolute top-1/2 right-0 hidden translate-x-[calc(100%+12px)] -translate-y-1/2 sm:block'
           }
         >
-          <IconButton aria-label={isLeft ? 'Previous images' : 'Next images'} onClick={onClick}>
+          <IconButton aria-label={isLeft ? 'Previous image' : 'Next image'} onClick={onClick}>
             {isLeft ? <ChevronLeftIcon size={20} /> : <ChevronRightIcon size={20} />}
           </IconButton>
         </motion.div>

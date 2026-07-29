@@ -27,7 +27,7 @@ export function Nav() {
   };
 
   return (
-    <nav className="bg-nav-gradient sticky top-0 z-1">
+    <nav aria-label="Primary navigation" className="bg-nav-gradient sticky top-0 z-1">
       <div className="mx-auto flex max-w-[640px] items-center justify-center p-5">
         <Tabs value={getActiveValue()} onValueChange={handleValueChange}>
           <TabsList>
