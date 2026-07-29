@@ -15,7 +15,7 @@ export function CopyLinkButton({ url, className }: { url: string; className?: st
       icon={<Link2 size={14} />}
       activeIcon={<Check size={14} />}
       onClick={handleCopyLink}
-      aria-label="Copy link"
+      aria-label={justCopied ? 'Link copied' : 'Copy project link'}
       className={className}
       activeClassName="opacity-100!"
     />
