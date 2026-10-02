@@ -20,7 +20,7 @@ To refresh the encrypted snapshot, put the server variables in an ignored `.env.
 ```sh
 npm run family:pack -- /absolute/path/to/family-history-site/public
 npm run test:family
-node --env-file=.env.local --run build
+node --env-file=.env.local -e "require('node:child_process').execSync('npm run build', {stdio:'inherit'})"
 ```
 
 Only the encrypted snapshot and code changes should appear in `git status`. Never publish `dist/` or `public/family/` separately. `vite preview` is a static preview without the password middleware; use Vercel preview deployments to verify production authentication.
