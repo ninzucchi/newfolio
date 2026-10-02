@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/family-content.mjs unpack && tsc -b && vite build",
+    "family:pack": "node --env-file=.env.local scripts/family-content.mjs pack",
+    "test:family": "node --test tests/family-*.test.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\" \"*.{js,json,md}\"",
@@ -22,6 +24,7 @@
     "@radix-ui/react-visually-hidden": "^1.2.4",
     "@tanstack/react-query": "^5.90.16",
     "@tanstack/react-router": "^1.139.3",
+    "@vercel/functions": "^3.9.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",

@@ -1,7 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/((?!assets|projects|avatar\\.jpg|favicon\\.svg).*)",
+      "source": "/family",
+      "destination": "/family/index.html"
+    },
+    {
+      "source": "/family/",
+      "destination": "/family/index.html"
+    },
+    {
+      "source": "/((?!family(?:/|$)|assets|projects|avatar\\.jpg|favicon\\.svg).*)",
       "destination": "/index.html"
     }
   ]
